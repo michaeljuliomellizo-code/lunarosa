@@ -168,7 +168,7 @@ Luna Rosa
       await resend.emails.send({
 
         from:
-          "onboarding@resend.dev",
+          "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -222,7 +222,7 @@ Luna Rosa
       await resend.emails.send({
 
         from:
-          "onboarding@resend.dev",
+          "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -293,7 +293,7 @@ Muy pronto será enviado.
 
     try {
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -348,7 +348,7 @@ Muy pronto será enviado.
 
     try {
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -398,7 +398,7 @@ Muy pronto será enviado.
 
     try {
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -460,7 +460,7 @@ Muy pronto será enviado.
 
     try {
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "ventas@lunarosa.store",
 
         to: customerEmail,
 
@@ -524,7 +524,7 @@ Muy pronto será enviado.
 
     try {
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "ventas@lunarosa.store",
 
         to: customerEmail,
 

@@ -32,7 +32,7 @@ export async function POST(
 
       await resend.emails.send({
         from:
-          "onboarding@resend.dev",
+          "ventas@lunarosa.store",
 
         to: user.email,
 
