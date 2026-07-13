@@ -285,7 +285,7 @@ export default function OrderDetail({
                       <strong>
                       Talla:
                       </strong>{" "}
-                      {item.product_variants.size}
+                      {item.product_variants?.size}
                     </p>
                     )}
 
