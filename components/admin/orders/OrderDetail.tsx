@@ -271,16 +271,16 @@ export default function OrderDetail({
                     </strong>{" "}
                     {item.quantity}
                   </p>
-                  {item.product_variants.color && (
+                  {item.product_variants?.color && (
                     <p>
                       <strong>
                       Color:
                       </strong>{" "}
-                      {item.product_variants.color}
+                      {item.product_variants?.color}
                     </p>
                     )}
 
-                    {item.product_variants.size && (
+                    {item.product_variants?.size && (
                     <p>
                       <strong>
                       Talla:

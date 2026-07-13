@@ -22,7 +22,7 @@ export default function OrderDetail({
   async function loadOrder() {
     try {
       const response = await fetch(
-        `/api/admin/orders/${orderId}`,
+        `/api/order/${orderId}`,
         {
           cache: "no-store",
         }
