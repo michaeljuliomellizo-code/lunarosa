@@ -641,7 +641,7 @@ export default function CheckoutForm() {
         <div className="flex justify-between mb-2">
           <span>Envío</span>
 
-          <span>Gratis</span>
+          <span>Ver Política de Envíos</span>
         </div>
 
         {couponCode && (
