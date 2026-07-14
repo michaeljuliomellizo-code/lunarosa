@@ -45,8 +45,32 @@ export default function CartItem({
     );
 
   return (
-    <div className="bg-white border rounded-3xl p-6 flex flex-col md:flex-row gap-6">
-      <div className="relative w-full md:w-40 h-40 rounded-2xl overflow-hidden bg-pink-50">
+    <div className="
+      bg-white
+      border
+      rounded-2xl
+      p-4
+      sm:p-6
+      flex
+      flex-col
+      md:flex-row
+      gap-4
+      sm:gap-6
+    ">
+      <div className="
+        relative
+        w-full
+        sm:w-64
+        md:w-40
+        h-60
+        sm:h-72
+        md:h-40
+        mx-auto
+        md:mx-0
+        rounded-2xl
+        overflow-hidden
+        bg-pink-50
+      ">
         <Image
           src={
             item.image ||
@@ -58,13 +82,23 @@ export default function CartItem({
         />
       </div>
 
-      <div className="flex-1">
-        <h2 className="text-2xl font-semibold">
+      <div className="flex-1 text-center md:text-left">
+        <h2 className="
+          text-xl
+          sm:text-2xl
+          lg:text-3xl
+          font-semibold
+        ">
           {item.name}
         </h2>
 
         {item.color && (
-          <p className="text-gray-500 mt-2">
+          <p className="
+            text-gray-500
+            mt-3
+            text-sm
+            sm:text-base
+          ">
             Color:{" "}
             <span className="font-medium">
               {item.color}
@@ -73,7 +107,13 @@ export default function CartItem({
         )}
 
         {item.size && (
-          <p className="text-gray-500">
+          <p className="
+            text-pink-600
+            text-2xl
+            sm:text-3xl
+            font-bold
+            mt-4
+          ">
             Talla:{" "}
             <span className="font-medium">
               {item.size}
@@ -82,7 +122,12 @@ export default function CartItem({
         )}
 
         {item.sku && (
-          <p className="text-gray-500">
+          <p className="
+            text-gray-500
+            mt-4
+            text-sm
+            sm:text-base
+          ">
             SKU:{" "}
             <span className="font-medium">
               {item.sku}
@@ -90,14 +135,29 @@ export default function CartItem({
           </p>
         )}
 
-        <p className="text-pink-600 text-2xl font-bold mt-4">
+        <p className="
+          text-pink-600
+          text-2xl
+          sm:text-3xl
+          font-bold
+          mt-4
+        ">
           $
           {Number(
             item.price
           ).toLocaleString()}
         </p>
 
-        <div className="flex items-center gap-4 mt-6">
+        <div
+          className="
+            flex
+            items-center
+            justify-center
+            md:justify-start
+            gap-4
+            mt-6
+          "
+        >
           <button
             onClick={() =>
               decreaseQuantity(
@@ -105,13 +165,17 @@ export default function CartItem({
               )
             }
             className="
-              w-10
-              h-10
+              w-11
+              h-11
+              sm:w-10
+              sm:h-10
               border
               rounded-full
               flex
               items-center
               justify-center
+              hover:bg-pink-50
+              transition
             "
           >
             <Minus size={18} />
@@ -141,12 +205,16 @@ export default function CartItem({
           </button>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-6">
           <p className="font-semibold">
             Subtotal:
           </p>
 
-          <p className="text-xl font-bold text-pink-600">
+          <p className="
+            text-2xl
+            font-bold
+            text-pink-600
+          ">
             $
             {(
               item.price *
@@ -156,7 +224,13 @@ export default function CartItem({
         </div>
       </div>
 
-      <div>
+      <div
+        className="
+          flex
+          justify-center
+          md:justify-start
+        "
+      >
         <button
           onClick={() =>
             removeItem(
@@ -166,6 +240,8 @@ export default function CartItem({
           className="
             text-red-500
             hover:text-red-700
+            p-2
+            transition
           "
         >
           <Trash2 size={22} />

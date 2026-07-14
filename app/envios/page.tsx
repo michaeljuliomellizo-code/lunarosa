@@ -14,9 +14,15 @@ export default function EnviosPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100">
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-14 md:py-20">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="
+          grid
+          lg:grid-cols-2
+          gap-10
+          lg:gap-16
+          items-center
+          ">
 
           <div>
 
@@ -33,7 +39,14 @@ export default function EnviosPage() {
 
             </div>
 
-            <h1 className="mt-8 text-5xl lg:text-6xl font-black leading-tight text-gray-900">
+            <h1 className="
+              mt-6
+              text-4xl
+              sm:text-5xl
+              lg:text-6xl
+              font-black
+              leading-tight
+              ">
 
               Enviamos a
               <span className="text-pink-600">
@@ -110,9 +123,16 @@ export default function EnviosPage() {
 
       <section className="max-w-7xl mx-auto px-6 pb-24">
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          xl:grid-cols-3
+          gap-6
+          lg:gap-8
+          ">
 
-          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-6 md:p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
             <div className="w-16 h-16 rounded-2xl bg-pink-100 flex items-center justify-center">
 
@@ -150,7 +170,7 @@ export default function EnviosPage() {
 
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-6 md:p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
             <div className="w-16 h-16 rounded-2xl bg-pink-100 flex items-center justify-center">
 
@@ -193,7 +213,7 @@ export default function EnviosPage() {
 
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-white rounded-3xl shadow-xl border border-pink-100 p-6 md:p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
             <div className="w-16 h-16 rounded-2xl bg-pink-100 flex items-center justify-center">
 
@@ -210,7 +230,11 @@ export default function EnviosPage() {
 
             </h2>
 
-            <p className="mt-5 text-gray-600 leading-7">
+            <p className="
+              text-4xl
+              md:text-5xl
+              font-black
+              ">
 
               Este método de pago únicamente está disponible para
               entregas dentro de Bogotá.
@@ -235,7 +259,7 @@ export default function EnviosPage() {
 
       <section className="pb-24 px-6">
 
-        <div className="max-w-6xl mx-auto rounded-[40px] bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 p-12 text-white shadow-2xl">
+        <div className="max-w-6xl mx-auto rounded-[40px] bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 p-8 md:p-12 text-white shadow-2xl">
 
           <div className="grid lg:grid-cols-2 gap-10 items-center">
 
@@ -262,7 +286,22 @@ export default function EnviosPage() {
               <Link
                 href="https://wa.me/573123851338"
                 target="_blank"
-                className="inline-flex items-center gap-3 bg-white text-pink-600 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition duration-300"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-3
+                  w-full
+                  sm:w-auto
+                  bg-white
+                  text-pink-600
+                  px-8
+                  py-4
+                  rounded-full
+                  font-bold
+                  text-base
+                  md:text-lg
+                  "
               >
                 Contactar por WhatsApp
 

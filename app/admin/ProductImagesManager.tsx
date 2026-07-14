@@ -130,7 +130,7 @@ export default function ProductImagesManager({
         }}
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+      <div className="grid grid-cols-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
         {images.map((image) => (
           <div
             key={image.id}

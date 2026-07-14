@@ -63,13 +63,21 @@ export default function AddToCartButton({
     <button
       onClick={handleAdd}
       className="
+        w-full
         bg-pink-500
         hover:bg-pink-600
+        active:bg-pink-700
         text-white
-        px-8
         py-3
-        rounded-lg
-        transition
+        px-4
+        rounded-xl
+        transition-all
+        duration-300
+        text-sm
+        sm:text-base
+        font-semibold
+        hover:scale-[1.02]
+        disabled:opacity-60
       "
     >
       {added

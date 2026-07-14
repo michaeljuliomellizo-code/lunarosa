@@ -40,8 +40,26 @@ export default async function OrderDetailPage({
       .eq("order_id", id);
 
   return (
-    <div className="max-w-6xl mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-8">
+    <div
+      className="
+        max-w-6xl
+        mx-auto
+        px-4
+        sm:px-6
+        lg:px-8
+        py-6
+        sm:py-10
+        lg:py-12
+      "
+    >
+      <h1
+        className="
+          text-3xl
+          sm:text-4xl
+          font-bold
+          mb-8
+        "
+      >
         Pedido
       </h1>
 
@@ -49,77 +67,131 @@ export default async function OrderDetailPage({
         status={order.status}
       />
 
-      <div className="mt-10 grid lg:grid-cols-2 gap-10">
+      <div
+        className="
+          mt-10
+          grid
+          grid-cols-1
+          lg:grid-cols-2
+          gap-8
+          lg:gap-10
+        "
+      >
         <div>
-          <h2 className="text-2xl font-bold mb-6">
+
+          <h2
+            className="
+              text-xl
+              sm:text-2xl
+              font-bold
+              mb-6
+            "
+          >
             Productos
           </h2>
 
           <OrderItems
             items={items || []}
           />
+
         </div>
 
-        <div className="border rounded-2xl p-6">
-          <h2 className="text-2xl font-bold mb-6">
+        <div
+          className="
+            border
+            rounded-2xl
+            p-5
+            sm:p-6
+            bg-white
+            shadow-sm
+          "
+        >
+          <h2
+            className="
+              text-xl
+              sm:text-2xl
+              font-bold
+              mb-6
+            "
+          >
             Resumen
           </h2>
 
-          <p>
-            Subtotal:
-            $
-            {Number(
-              order.subtotal
-            ).toLocaleString()}
-          </p>
+          <div className="space-y-3">
 
-          <p>
-            Envío:
-            $
-            {Number(
-              order.shipping
-            ).toLocaleString()}
-          </p>
+            <div className="flex justify-between">
+              <span>Subtotal</span>
 
-          <p>
-            Total:
-            $
-            {Number(
-              order.total
-            ).toLocaleString()}
-          </p>
+              <span>
+                $
+                {Number(order.subtotal).toLocaleString()}
+              </span>
+            </div>
 
-          <p className="mt-4">
-            Estado:
-            {order.status}
-          </p>
+            <div className="flex justify-between">
+              <span>Envío</span>
 
-          <p>
-            Pago:
-            {
-              order.payment_status
-            }
-          </p>
+              <span>
+                $
+                {Number(order.shipping).toLocaleString()}
+              </span>
+            </div>
+
+            <div
+              className="
+                flex
+                justify-between
+                text-lg
+                font-bold
+                text-pink-600
+                pt-3
+                border-t
+              "
+            >
+              <span>Total</span>
+
+              <span>
+                $
+                {Number(order.total).toLocaleString()}
+              </span>
+            </div>
+
+          </div>
+
+          <div className="mt-6 space-y-2">
+
+            <p className="break-words">
+              <strong>Estado:</strong> {order.status}
+            </p>
+
+            <p className="break-words">
+              <strong>Pago:</strong> {order.payment_status}
+            </p>
+
+          </div>
 
           {order.carrier && (
             <>
-              <hr className="my-4" />
+              <hr className="my-6" />
 
-              <p>
-                Transportadora:
-                {order.carrier}
-              </p>
+              <div className="space-y-2">
 
-              <p>
-                Tracking:
-                {
-                  order.tracking_number
-                }
-              </p>
+                <p className="break-words">
+                  <strong>Transportadora:</strong> {order.carrier}
+                </p>
+
+                <p className="break-all">
+                  <strong>Tracking:</strong> {order.tracking_number}
+                </p>
+
+              </div>
             </>
           )}
+
         </div>
+
       </div>
+
     </div>
   );
 }

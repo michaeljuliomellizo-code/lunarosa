@@ -58,13 +58,33 @@ export default function PublicOrderDetail({
   }
 
   return (
-    <div className="space-y-6">
+    <div
+      className="
+        space-y-6
+        w-full
+      "
+    >
       <div className="bg-white rounded-xl border p-6">
-        <h1 className="text-3xl font-bold">
+        <h1
+          className="
+            text-2xl
+            sm:text-3xl
+            font-bold
+            break-words
+          "
+        >
           Pedido #{order.order_number ?? order.id}
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            gap-6
+            mt-6
+          "
+        >
           <div>
             <p>
               <strong>Cliente:</strong>{" "}
@@ -136,7 +156,17 @@ export default function PublicOrderDetail({
                 href={order.payment_proof}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-pink-600 text-white px-4 py-2 rounded-lg"
+                className="
+                  w-full
+                  sm:w-auto
+                  inline-flex
+                  justify-center
+                  bg-pink-600
+                  text-white
+                  px-5
+                  py-3
+                  rounded-lg
+                  "
               >
                 Ver comprobante
               </a>
@@ -148,7 +178,13 @@ export default function PublicOrderDetail({
               <img
                 src={order.payment_proof}
                 alt="Comprobante"
-                className="mt-4 max-w-md rounded-lg border"
+                className="
+                  mt-4
+                  w-full
+                  max-w-md
+                  rounded-lg
+                  border
+                  "
               />
             )}
           </div>
@@ -165,7 +201,15 @@ export default function PublicOrderDetail({
             (item: any) => (
               <div
                 key={item.id}
-                className="border rounded-xl p-4 flex gap-4"
+                className="
+                  border
+                  rounded-xl
+                  p-4
+                  flex
+                  flex-col
+                  sm:flex-row
+                  gap-4
+                  "
               >
                 <img
                   src={
@@ -175,11 +219,23 @@ export default function PublicOrderDetail({
                   alt={
                     item.products?.name
                   }
-                  className="w-24 h-24 object-cover rounded-lg border"
+                  className="
+                    w-full
+                    sm:w-24
+                    h-56
+                    sm:h-24
+                    object-cover
+                    rounded-lg
+                    border
+                    "
                 />
 
                 <div className="flex-1">
-                  <h3 className="font-bold text-lg">
+                  <h3 className="
+                    font-bold
+                    text-lg
+                    break-words
+                    ">
                     {item.products?.name}
                   </h3>
 
@@ -237,7 +293,12 @@ export default function PublicOrderDetail({
             (history: any) => (
               <div
                 key={history.id}
-                className="border-l-4 border-pink-500 pl-4"
+                className="
+                  border-l-4
+                  border-pink-500
+                  pl-4
+                  break-words
+                  "
               >
                 <p className="font-semibold capitalize">
                   {history.status}

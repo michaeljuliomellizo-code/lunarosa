@@ -294,14 +294,14 @@ export default function CheckoutForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6"
+      className="space-y-6 max-w-5xl mx-auto"
     >
-      <div className="bg-white p-6 rounded-xl border">
+      <div className="bg-white p-4 sm:p-6 rounded-xl border">
         <h2 className="text-2xl font-bold mb-6">
           Datos del Cliente
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
           <input
             type="text"
@@ -312,7 +312,7 @@ export default function CheckoutForm() {
                 e.target.value
               )
             }
-            className="border rounded-lg p-3"
+            className="border rounded-lg p-3 w-full"
             required
             disabled={loading}
           />
@@ -326,7 +326,7 @@ export default function CheckoutForm() {
                 e.target.value
               )
             }
-            className="border rounded-lg p-3"
+            className="border rounded-lg p-3 w-full"
             required
             disabled={loading}
           />
@@ -340,7 +340,7 @@ export default function CheckoutForm() {
                 e.target.value
               )
             }
-            className="border rounded-lg p-3"
+            className="border rounded-lg p-3 w-full"
             required
             disabled={loading}
           />
@@ -354,7 +354,7 @@ export default function CheckoutForm() {
                 e.target.value
               )
             }
-            className="border rounded-lg p-3"
+            className="border rounded-lg p-3 w-full"
             required
             disabled={loading}
           />
@@ -368,7 +368,7 @@ export default function CheckoutForm() {
                 e.target.value
               )
             }
-            className="border rounded-lg p-3"
+            className="border rounded-lg p-3 w-full"
             disabled={loading}
           />
 
@@ -395,7 +395,7 @@ export default function CheckoutForm() {
           Método de Pago
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     <button
             type="button"
@@ -405,7 +405,7 @@ export default function CheckoutForm() {
                 "contraentrega"
               )
             }
-            className={`border-2 rounded-2xl p-5 text-left transition-all ${
+            className={`border-2 rounded-2xl p-4 sm:p-5 text-left transition-all ${
               paymentMethod ===
               "contraentrega"
                 ? "border-pink-500 bg-pink-50"
@@ -620,7 +620,7 @@ export default function CheckoutForm() {
         )}
 
       </div>
-            <div className="bg-gradient-to-br from-white to-pink-50 border rounded-3xl p-6 shadow-sm">
+            <div className="bg-gradient-to-br from-white to-pink-50 border rounded-3xl p-4 sm:p-6 shadow-sm">
 
         <h2 className="font-bold text-xl mb-4">
           Resumen
@@ -666,7 +666,7 @@ export default function CheckoutForm() {
 
         </div>
 
-        <div className="border-t pt-4 mt-4 flex justify-between text-xl font-bold">
+        <div className="border-t pt-4 mt-4 flex justify-between items-center text-lg sm:text-xl font-bold">
 
           <span>Total</span>
 
@@ -701,10 +701,10 @@ export default function CheckoutForm() {
           disabled:cursor-not-allowed
           disabled:opacity-70
           text-white
-          py-4
+          py-3 sm:py-4
           rounded-xl
           font-semibold
-          text-lg
+          text-base sm:text-lg
         "
       >
         {loading

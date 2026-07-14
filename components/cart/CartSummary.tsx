@@ -11,9 +11,19 @@ export default function CartSummary() {
   );
 
   return (
-    <div className="bg-white border rounded-3xl p-8 sticky top-24">
+    <div
+      className="
+        bg-white
+        border
+        rounded-2xl
+        p-5
+        md:p-8
+        lg:sticky
+        lg:top-24
+      "
+    >
 
-      <h2 className="text-3xl font-bold mb-8">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
         Resumen
       </h2>
 
@@ -21,7 +31,7 @@ export default function CartSummary() {
 
       <div className="border-t mt-6 pt-6">
 
-        <div className="flex justify-between text-2xl font-bold">
+        <div className="flex justify-between text-xl md:text-2xl font-bold">
 
           <span>Total</span>
 

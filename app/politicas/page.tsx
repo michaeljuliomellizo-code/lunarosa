@@ -12,9 +12,29 @@ export default function PoliticasPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100">
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          py-8
+          sm:py-12
+          lg:py-20
+        "
+      >
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div
+          className="
+            grid
+            grid-cols-1
+            lg:grid-cols-2
+            gap-10
+            lg:gap-16
+            items-center
+          "
+        >
 
           <div>
 
@@ -31,7 +51,17 @@ export default function PoliticasPage() {
 
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-black mt-8 leading-tight">
+            <h1
+              className="
+                text-2xl sm:text-3xl
+                sm:text-4xl
+                lg:text-6xl
+                font-black
+                mt-6
+                sm:mt-8
+                leading-tight
+              "
+            >
 
               Política de
               <span className="text-pink-600">
@@ -44,7 +74,17 @@ export default function PoliticasPage() {
 
             </h1>
 
-            <p className="text-lg text-gray-600 mt-8 leading-8">
+            <p
+              className="
+                text-base
+                sm:text-lg
+                text-gray-600
+                mt-6
+                sm:mt-8
+                leading-7
+                sm:leading-8
+              "
+            >
 
               En Luna Rosa trabajamos para ofrecer productos de excelente
               calidad. Si tu compra presenta algún inconveniente, aquí
@@ -63,7 +103,12 @@ export default function PoliticasPage() {
               width={700}
               height={700}
               priority
-              className="rounded-[40px] shadow-2xl"
+              className="
+                w-full
+                h-auto
+                rounded-3xl
+                shadow-2xl
+              "
             />
 
           </div>
@@ -72,9 +117,22 @@ export default function PoliticasPage() {
 
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-24 space-y-10">
+      <section
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          pb-12
+          sm:pb-20
+          lg:pb-24
+          space-y-6
+          sm:space-y-10
+        "
+      >
 
-        <div className="bg-white rounded-3xl shadow-lg p-10">
+        <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-10">
 
           <div className="flex items-center gap-4">
 
@@ -83,7 +141,7 @@ export default function PoliticasPage() {
               size={32}
             />
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl sm:text-3xl font-bold">
               Reclamaciones
             </h2>
 
@@ -148,7 +206,7 @@ export default function PoliticasPage() {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-10">
+        <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-10">
 
           <div className="flex items-center gap-4">
 
@@ -157,7 +215,7 @@ export default function PoliticasPage() {
               size={32}
             />
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl sm:text-3xl font-bold">
 
               Procedimiento para Solicitar Cambios
 
@@ -203,7 +261,7 @@ export default function PoliticasPage() {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-10">
+        <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-10">
 
           <div className="flex items-center gap-4">
 
@@ -212,7 +270,7 @@ export default function PoliticasPage() {
               size={32}
             />
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl sm:text-3xl font-bold">
 
               Garantía
 
@@ -244,7 +302,7 @@ export default function PoliticasPage() {
 
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-10">
+        <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-10">
 
           <div className="flex items-center gap-4">
 
@@ -253,7 +311,7 @@ export default function PoliticasPage() {
               size={32}
             />
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl sm:text-3xl font-bold">
 
               Trámite de Garantía
 
@@ -315,9 +373,25 @@ export default function PoliticasPage() {
 
         </div>
 
-        <div className="bg-gradient-to-r from-pink-500 to-pink-600 rounded-3xl text-white p-12">
+        <div className="
+          bg-gradient-to-r
+          from-pink-500
+          to-pink-600
+          rounded-3xl
+          text-white
+          p-6
+          sm:p-10
+          lg:p-12
+          ">
 
-          <h2 className="text-4xl font-black">
+          <h2
+            className="
+              text-2xl
+              sm:text-3xl
+              lg:text-4xl
+              font-black
+            "
+          >
 
             Si la garantía es aprobada
 
@@ -334,7 +408,7 @@ export default function PoliticasPage() {
             href="https://wa.me/573123851338"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 mt-10 bg-white text-pink-600 px-8 py-4 rounded-full font-bold hover:scale-105 transition"
+            className="inline-flex items-center gap-3 mt-10 bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:scale-105 transition"
           >
 
             <MessageCircle size={22} />

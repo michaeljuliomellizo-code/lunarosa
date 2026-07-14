@@ -134,14 +134,15 @@ export default async function CatalogPage({
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
         Catálogo
       </h1>
 
       <CatalogFilters
         categories={
           categories || []
+          
         }
         selectedCategory={
           category
@@ -150,15 +151,16 @@ export default async function CatalogPage({
         search={search}
       />
 
-      <div
-        className="
-          grid
-          grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-          gap-8
-        "
-      >
+      <div className="mt-8
+        grid
+        grid-cols-2
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        gap-4
+        sm:gap-6
+        lg:gap-8
+      ">
         {products?.map(
           (product) => (
             <ProductCard
@@ -169,15 +171,17 @@ export default async function CatalogPage({
         )}
       </div>
 
-      <Pagination
-        currentPage={page}
-        totalPages={totalPages}
-        searchParams={{
-          q: search,
-          category,
-          sort,
-        }}
-      />
+      <div className="mt-10 sm:mt-12">
+        <Pagination
+          currentPage={page}
+          totalPages={totalPages}
+          searchParams={{
+            q: search,
+            category,
+            sort,
+          }}
+        />
+      </div>
     </div>
   );
 }

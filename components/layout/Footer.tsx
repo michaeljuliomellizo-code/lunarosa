@@ -4,14 +4,37 @@ export default function Footer() {
   return (
     <footer className="bg-pink-100 mt-20">
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          py-12
+          sm:py-16
+        "
+      >
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+          gap-10
+          ">
 
           {/* BRAND */}
           <div>
 
-            <h2 className="text-3xl font-bold text-pink-500">
+            <h2
+              className="
+                text-2xl
+                sm:text-3xl
+                font-bold
+                text-pink-500
+              "
+            >
               Luna Rosa
             </h2>
 
@@ -76,7 +99,7 @@ export default function Footer() {
                 WhatsApp: 3123851338
               </p>
 
-              <p>
+              <p className="break-all">
                 lunarosa.mujer10@gmail.com
               </p>
             </div>

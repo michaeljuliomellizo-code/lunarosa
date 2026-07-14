@@ -8,14 +8,40 @@ import CartActions from "@/components/cart/CartActions";
 export default function CartPage() {
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-16">
+    <main
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          py-6
+          sm:py-10
+          lg:py-16
+        "
+      >
 
       <CartHeader />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div
+        className="
+          grid
+          grid-cols-1
+          lg:grid-cols-3
+          gap-6
+          lg:gap-10
+          items-start
+        "
+      >
 
         {/* LEFT */}
-        <div className="lg:col-span-2 space-y-8">
+        <div
+          className="
+            lg:col-span-2
+            space-y-6
+            sm:space-y-8
+          "
+        >
 
           <CartList />
 
@@ -25,7 +51,7 @@ export default function CartPage() {
         </div>
 
         {/* RIGHT */}
-        <div>
+        <div className="lg:sticky lg:top-24">
           <CartSummary />
         </div>
       </div>

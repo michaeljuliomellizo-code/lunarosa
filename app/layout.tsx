@@ -7,27 +7,33 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import CartHydration from "@/components/providers/CartHydration";
 import AuthListener from "@/components/AuthListener";
 
+export const metadata = {
+  viewport: "width=device-width, initial-scale=1",
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="es">
-
-      <body>
-
+      <body className="min-h-screen overflow-x-hidden bg-light">
         <TopBar />
+
         <AuthListener />
+
         <AnnouncementBar />
 
         <Navbar />
+
         <CartHydration />
-        {children}
+
+        <main className="w-full">
+          {children}
+        </main>
 
         <Footer />
-
       </body>
     </html>
   );

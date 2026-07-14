@@ -28,20 +28,20 @@ export default async function Categories() {
       .limit(8);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
 
         <div className="text-center mb-14">
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             Categorías
           </h2>
 
-          <p className="text-gray-500 mt-4 text-lg">
+          <p className="text-gray-500 mt-3 text-base md:text-lg">
             Descubre nuestras colecciones exclusivas
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
 
           {categories?.map(
             (category: any) => (
@@ -61,10 +61,11 @@ export default async function Categories() {
                     transition-all
                     duration-500
                     hover:-translate-y-2
+                    h-full
                   "
                 >
 
-                  <div className="relative h-[420px] overflow-hidden">
+                  <div className="relative h-56 sm:h-72 md:h-[420px] overflow-hidden">
 
                     <Image
                       src={
@@ -74,6 +75,7 @@ export default async function Categories() {
                         category.name
                       }
                       fill
+                      sizes="(max-width:768px) 50vw, (max-width:1024px) 33vw, 25vw"
                       className="
                         object-cover
                         transition-transform
@@ -105,23 +107,19 @@ export default async function Categories() {
                     >
 
                       <h3
-                        className="
-                          text-white
-                          text-3xl
-                          font-bold
-                          transition-all
-                          duration-300
-                          group-hover:-translate-y-1
-                        "
+                        className="text-white text-lg md:text-3xl font-bold transition-all duration-300 group-hover:-translate-y-1"
                       >
                         {category.name}
                       </h3>
 
                       <span
                         className="
-                          mt-3
+                          mt-2
+                          md:mt-3
                           inline-flex
                           items-center
+                          text-sm
+                          md:text-base
                           text-white
                           font-medium
                           opacity-0
@@ -130,7 +128,7 @@ export default async function Categories() {
                           duration-500
                           group-hover:opacity-100
                           group-hover:translate-y-0
-                        "
+                          "
                       >
                         Ver colección →
                       </span>

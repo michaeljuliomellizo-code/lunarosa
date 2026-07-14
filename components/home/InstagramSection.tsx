@@ -76,7 +76,7 @@ export default function InstagramSection() {
         </div>
 
         {loading ? (
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {Array.from({
               length: 8,
             }).map(
@@ -97,7 +97,7 @@ export default function InstagramSection() {
             )}
           </div>
         ) : (
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {posts.map(
               (post) => (
                 <a

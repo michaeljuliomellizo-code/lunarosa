@@ -36,9 +36,18 @@ export default async function ProductPage({
     .eq("active", true);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12">
 
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div
+        className="
+          grid
+          grid-cols-1
+          lg:grid-cols-2
+          gap-8
+          lg:gap-12
+          items-start
+        "
+      >
 
         <div>
           {product.image && (
@@ -47,34 +56,68 @@ export default async function ProductPage({
               alt={product.name}
               className="
                 w-full
-                rounded-xl
-                shadow
+                rounded-2xl
+                shadow-lg
+                object-cover
+                max-h-[700px]
               "
             />
           )}
         </div>
 
-        <div>
+        <div className="flex flex-col">
 
-          <h1 className="text-4xl font-bold">
+          <h1
+            className="
+              text-2xl
+              sm:text-3xl
+              lg:text-4xl
+              font-bold
+              leading-tight
+            "
+          >
             {product.name}
           </h1>
 
           {product.description && (
-            <p className="mt-6 text-gray-600">
+            <p
+              className="
+                mt-4
+                sm:mt-6
+                text-gray-600
+                text-sm
+                sm:text-base
+                leading-7
+              "
+            >
               {product.description}
             </p>
           )}
 
           <div className="mt-8">
 
-            <p className="text-3xl font-bold text-pink-600">
+            <p
+              className="
+                text-2xl
+                sm:text-3xl
+                lg:text-4xl
+                font-bold
+                text-pink-600
+              "
+            >
               $
               {Number(product.price).toLocaleString()}
             </p>
 
             {product.compare_price && (
-              <p className="text-lg text-gray-400 line-through">
+              <p
+                className="
+                  text-sm
+                  sm:text-lg
+                  text-gray-400
+                  line-through
+                "
+              >
                 $
                 {Number(
                   product.compare_price
@@ -98,7 +141,7 @@ export default async function ProductPage({
 
           </div>
 
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
 
             {variants && variants.length > 0 ? (
 
@@ -140,7 +183,7 @@ export default async function ProductPage({
 
           </div>
 
-          <div className="mt-6">
+          <div className="mt-4 sm:mt-6">
 
             <WishlistButton
               productId={String(product.id)}
@@ -152,18 +195,35 @@ export default async function ProductPage({
 
       </div>
 
-      <RelatedProducts
-        categoryId={String(product.category_id)}
-        currentProductId={String(product.id)}
-      />
+      <div className="mt-14 sm:mt-20">
+        <RelatedProducts
+          categoryId={String(product.category_id)}
+          currentProductId={String(product.id)}
+        />
+      </div>
 
-      <div className="mt-20 border-t pt-16">
+      <div
+        className="
+          mt-14
+          sm:mt-20
+          border-t
+          pt-10
+          sm:pt-16
+        "
+      >
 
         <div className="max-w-4xl mx-auto">
 
           <div className="text-center mb-12">
 
-            <h2 className="text-4xl font-bold">
+            <h2
+              className="
+                text-2xl
+                sm:text-3xl
+                lg:text-4xl
+                font-bold
+              "
+            >
               Opiniones de Clientes
             </h2>
 

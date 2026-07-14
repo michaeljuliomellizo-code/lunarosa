@@ -25,19 +25,54 @@ export default async function OrdersPage() {
       });
 
   return (
-    <div className="max-w-6xl mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-10">
+    <div
+      className="
+        max-w-6xl
+        mx-auto
+        px-4
+        sm:px-6
+        lg:px-8
+        py-6
+        sm:py-10
+        lg:py-12
+      "
+    >
+      <h1
+        className="
+          text-3xl
+          sm:text-4xl
+          font-bold
+          mb-8
+          sm:mb-10
+        "
+      >
         Mis Pedidos
       </h1>
 
-      <div className="grid gap-6">
-        {orders?.map((order) => (
-          <OrderCard
-            key={order.id}
-            order={order}
-          />
-        ))}
-      </div>
+      {orders && orders.length > 0 ? (
+        <div className="grid gap-6">
+          {orders.map((order) => (
+            <OrderCard
+              key={order.id}
+              order={order}
+            />
+          ))}
+        </div>
+      ) : (
+        <div
+          className="
+            bg-white
+            rounded-3xl
+            shadow
+            p-8
+            text-center
+          "
+        >
+          <p className="text-lg text-gray-500">
+            Aún no tienes pedidos realizados.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

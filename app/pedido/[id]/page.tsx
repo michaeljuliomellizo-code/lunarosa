@@ -51,15 +51,26 @@ export default async function OrderTrackingPage({
       });
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12">
+    <main
+      className="
+        max-w-6xl
+        mx-auto
+        px-4
+        sm:px-6
+        lg:px-8
+        py-6
+        sm:py-10
+        lg:py-12
+      "
+    >
 
-      <h1 className="text-4xl font-bold mb-10">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10">
         Seguimiento Pedido
       </h1>
 
-      <div className="bg-white rounded-xl shadow p-8">
+      <div className="bg-white rounded-xl shadow p-4 sm:p-6 lg:p-8">
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
           <div>
 
@@ -128,7 +139,7 @@ export default async function OrderTrackingPage({
           Estado del Pedido
         </h2>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center md:justify-start gap-3">
 
           <Step
             title="Pendiente"
@@ -218,8 +229,11 @@ export default async function OrderTrackingPage({
               key={item.id}
               className="
                 flex
+                flex-col
+                sm:flex-row
                 gap-4
                 items-center
+                sm:items-start
                 border-b
                 pb-4
               "
@@ -237,15 +251,18 @@ export default async function OrderTrackingPage({
                       .name
                   }
                   className="
-                    w-20
-                    h-20
-                    rounded
+                    w-24
+                    h-24
+                    sm:w-20
+                    sm:h-20
+                    rounded-lg
                     object-cover
+                    flex-shrink-0
                   "
                 />
               )}
 
-              <div>
+              <div className="text-center sm:text-left flex-1">
 
                 <p className="font-semibold">
                   {
@@ -294,6 +311,7 @@ export default async function OrderTrackingPage({
                 className="
                   border-b
                   pb-4
+                  break-words
                 "
               >
                 <p className="font-semibold">

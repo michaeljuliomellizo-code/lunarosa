@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
-
 import { createClient } from "@/lib/supabase/server";
 
 export default async function PerfilPage() {
@@ -36,16 +33,49 @@ export default async function PerfilPage() {
     <div className="min-h-screen bg-pink-50">
       
 
-      <main className="max-w-6xl mx-auto px-4 py-20">
-        <div className="bg-white rounded-3xl shadow-lg p-10">
-          <div className="flex items-center gap-6">
+      <main
+        className="
+          max-w-6xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          py-6
+          sm:py-10
+          lg:py-16
+        "
+      >
+        <div
+          className="
+            bg-white
+            rounded-3xl
+            shadow-lg
+            p-5
+            sm:p-8
+            lg:p-10
+          "
+        >
+          <div
+            className="
+              flex
+              flex-col
+              sm:flex-row
+              items-center
+              sm:items-start
+              gap-6
+              text-center
+              sm:text-left
+            "
+          >
             {profile?.avatar_url ? (
               <img
                 src={profile.avatar_url}
                 alt="Avatar"
                 className="
-                  w-28
-                  h-28
+                  w-24
+                  h-24
+                  sm:w-28
+                  sm:h-28
                   rounded-full
                   object-cover
                 "
@@ -62,7 +92,13 @@ export default async function PerfilPage() {
             )}
 
             <div>
-              <h1 className="text-4xl font-bold">
+              <h1
+                className="
+                  text-3xl
+                  sm:text-4xl
+                  font-bold
+                "
+              >
                 Mi Perfil
               </h1>
 
@@ -76,7 +112,17 @@ export default async function PerfilPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              gap-6
+              mt-10
+              sm:mt-12
+            "
+          >
             <div className="bg-pink-50 rounded-2xl p-6">
               <h3 className="font-semibold">
                 Órdenes
@@ -111,8 +157,22 @@ export default async function PerfilPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-14">
-            <div className="border rounded-3xl p-8">
+          <div
+            className="
+              grid
+              grid-cols-1
+              lg:grid-cols-2
+              gap-8
+              mt-10
+              sm:mt-14
+            "
+          >
+            <div className="
+              border
+              rounded-3xl
+              p-5
+              sm:p-8
+              ">
               <h2 className="text-2xl font-bold mb-6">
                 Información Personal
               </h2>
@@ -133,10 +193,14 @@ export default async function PerfilPage() {
                       w-full
                       border
                       rounded-full
-                      px-6
-                      py-4
+                      px-4
+                      sm:px-6
+                      py-3
+                      sm:py-4
                       bg-gray-50
-                    "
+                      text-sm
+                      sm:text-base
+                      "
                   />
                 </div>
 
@@ -201,7 +265,8 @@ export default async function PerfilPage() {
                     bg-pink-500
                     hover:bg-pink-600
                     text-white
-                    py-4
+                    py-3
+                    sm:py-4
                     rounded-full
                     transition
                   "
@@ -216,7 +281,8 @@ export default async function PerfilPage() {
                     w-full
                     text-center
                     border
-                    py-4
+                    py-3
+                    sm:py-4
                     rounded-full
                     hover:bg-gray-50
                   "
@@ -231,7 +297,8 @@ export default async function PerfilPage() {
                     w-full
                     text-center
                     border
-                    py-4
+                    py-3
+                    sm:py-4
                     rounded-full
                     hover:bg-gray-50
                   "

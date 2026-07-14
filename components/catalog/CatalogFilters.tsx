@@ -21,12 +21,15 @@ export default function CatalogFilters({
     <form
       className="
         bg-white
-        rounded-xl
-        shadow
-        p-6
-        mb-10
+        rounded-2xl
+        shadow-md
+        p-4
+        sm:p-6
+        mb-8
         grid
-        md:grid-cols-4
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-4
         gap-4
       "
     >
@@ -36,9 +39,17 @@ export default function CatalogFilters({
         defaultValue={search}
         placeholder="Buscar productos..."
         className="
+          w-full
           border
-          rounded-lg
-          p-3
+          rounded-xl
+          px-4
+          py-3
+          text-sm
+          sm:text-base
+          focus:ring-2
+          focus:ring-pink-400
+          focus:border-pink-400
+          outline-none
         "
       />
 
@@ -46,9 +57,17 @@ export default function CatalogFilters({
         name="category"
         defaultValue={selectedCategory}
         className="
+          w-full
           border
-          rounded-lg
-          p-3
+          rounded-xl
+          px-4
+          py-3
+          text-sm
+          sm:text-base
+          focus:ring-2
+          focus:ring-pink-400
+          focus:border-pink-400
+          outline-none
         "
       >
         <option value="">
@@ -93,10 +112,15 @@ export default function CatalogFilters({
 
       <button
         className="
+          w-full
           bg-pink-500
+          hover:bg-pink-600
           text-white
-          rounded-lg
-          p-3
+          font-semibold
+          rounded-xl
+          py-3
+          transition
+          duration-200
         "
       >
         Aplicar

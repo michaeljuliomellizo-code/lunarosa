@@ -10,9 +10,29 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-100">
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section
+        className="
+          max-w-7xl
+          mx-auto
+          px-4
+          sm:px-6
+          lg:px-8
+          py-8
+          sm:py-12
+          lg:py-20
+        "
+      >
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div
+          className="
+            grid
+            grid-cols-1
+            lg:grid-cols-2
+            gap-10
+            lg:gap-16
+            items-center
+          "
+        >
 
           <div className="relative">
 
@@ -45,13 +65,31 @@ export default function ContactPage() {
 
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+            <h1
+              className="
+                text-3xl
+                sm:text-4xl
+                lg:text-6xl
+                font-black
+                leading-tight
+              "
+            >
 
               Estamos para ayudarte
 
             </h1>
 
-            <p className="mt-8 text-lg text-gray-600 leading-8">
+            <p
+              className="
+                mt-6
+                sm:mt-8
+                text-base
+                sm:text-lg
+                text-gray-600
+                leading-7
+                sm:leading-8
+              "
+            >
 
               Nuestro equipo está listo para responder todas tus preguntas,
               ayudarte con tu compra o asesorarte para encontrar el look
@@ -61,7 +99,7 @@ export default function ContactPage() {
 
             <div className="mt-12 space-y-6">
 
-              <div className="bg-white rounded-3xl shadow-lg p-6 border border-pink-100 hover:shadow-xl transition">
+              <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-6 border border-pink-100 hover:shadow-xl transition">
 
                 <div className="flex items-center gap-5">
 
@@ -97,11 +135,11 @@ export default function ContactPage() {
 
               </div>
 
-              <div className="bg-white rounded-3xl shadow-lg p-6 border border-green-100 hover:shadow-xl transition">
+              <div className="bg-white rounded-3xl shadow-lg p-5 sm:p-6 border border-green-100 hover:shadow-xl transition">
 
                 <div className="flex items-center gap-5">
 
-                  <div className="w-16 h-16 rounded-2xl bg-green-500 flex items-center justify-center text-white">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-green-500 flex items-center justify-center text-white">
 
                     <MessageCircle size={28} />
 
@@ -137,7 +175,17 @@ export default function ContactPage() {
 
             </div>
 
-            <div className="mt-12 bg-white/70 backdrop-blur-lg rounded-3xl p-8 border border-pink-100 shadow-lg">
+            <div
+              className="
+                mt-10
+                sm:mt-12
+                bg-white/70
+                backdrop-blur-lg
+                rounded-3xl
+                p-5
+                sm:p-8
+              "
+            >
 
               <div className="flex items-center gap-3 mb-4">
 

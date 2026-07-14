@@ -62,14 +62,21 @@ export default function ProductVariantSelector({
   );
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5 sm:space-y-6">
 
       <div>
-        <h3 className="font-semibold mb-3">
+        <h3
+          className="
+            font-semibold
+            text-base
+            sm:text-lg
+            mb-3
+          "
+        >
           Color
         </h3>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {colors.map((color) => (
             <button
               key={color}
@@ -78,10 +85,21 @@ export default function ProductVariantSelector({
                 setSelectedColor(color);
                 setSelectedSize("");
               }}
-              className={`px-4 py-2 rounded-lg border transition ${
-                selectedColor === color
-                  ? "bg-pink-500 text-white border-pink-500"
-                  : "bg-white"
+              className={`
+                min-w-[90px]
+                sm:min-w-[110px]
+                px-4
+                py-2
+                rounded-xl
+                border
+                text-sm
+                sm:text-base
+                transition-all
+                duration-200
+                ${
+                  selectedColor === color
+                    ? "bg-pink-500 text-white border-pink-500"
+                    : "bg-white hover:border-pink-400"
               }`}
             >
               {color}
@@ -104,10 +122,21 @@ export default function ProductVariantSelector({
                 onClick={() =>
                   setSelectedSize(size)
                 }
-                className={`px-4 py-2 rounded-lg border transition ${
-                  selectedSize === size
-                    ? "bg-pink-500 text-white border-pink-500"
-                    : "bg-white"
+                className={`
+                  min-w-[90px]
+                  sm:min-w-[110px]
+                  px-4
+                  py-2
+                  rounded-xl
+                  border
+                  text-sm
+                  sm:text-base
+                  transition-all
+                  duration-200
+                  ${
+                    selectedSize === size
+                      ? "bg-pink-500 text-white border-pink-500"
+                      : "bg-white hover:border-pink-400"
                 }`}
               >
                 {size}
@@ -117,11 +146,19 @@ export default function ProductVariantSelector({
         </div>
       )}
 
-      <div className="space-y-3">
+      <div className="space-y-4">
 
         {variant ? (
           <>
-            <p className="text-3xl font-bold text-pink-600">
+            <p
+              className="
+                text-2xl
+                sm:text-3xl
+                lg:text-4xl
+                font-bold
+                text-pink-600
+              "
+            >
               $
               {Number(
                 variant.price > 0
@@ -130,11 +167,24 @@ export default function ProductVariantSelector({
               ).toLocaleString()}
             </p>
 
-            <p className="text-green-600">
+            <p
+              className="
+                text-green-600
+                text-sm
+                sm:text-base
+                font-medium
+              "
+            >
               Stock: {variant.stock}
             </p>
 
-            <p className="text-gray-500">
+            <p
+              className="
+                text-gray-500
+                text-sm
+                break-all
+              "
+            >
               SKU: {variant.sku}
             </p>
 
@@ -159,7 +209,15 @@ export default function ProductVariantSelector({
         ) : (
           <button
             disabled
-            className="w-full bg-gray-300 text-gray-600 px-8 py-3 rounded-lg cursor-not-allowed"
+            className="
+              w-full
+              bg-gray-300
+              text-gray-600
+              py-3
+              rounded-xl
+              font-semibold
+              cursor-not-allowed
+            "
           >
             Selecciona color y talla
           </button>
