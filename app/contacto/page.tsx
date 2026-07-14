@@ -126,7 +126,7 @@ export default function ContactPage() {
                 </div>
 
                 <Link
-                  href="https://instagram.com/Luna_Rosa"
+                  href="https://instagram.com/Luna_Rosa_Ropa_Femenina"
                   target="_blank"
                   className="mt-6 inline-flex w-full justify-center bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-xl py-3 font-semibold hover:scale-[1.02] transition"
                 >
