@@ -184,7 +184,7 @@ export default function InstagramSection() {
 
         <div className="text-center mt-12">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/Luna_Rosa_Ropa_Femenina"
             target="_blank"
             rel="noreferrer"
             className="
