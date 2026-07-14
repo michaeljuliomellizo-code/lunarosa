@@ -117,7 +117,7 @@ export default function ContactPage() {
 
                     <p className="text-gray-500">
 
-                      @Luna_Rosa
+                      @Luna_Rosa_Ropa_Femenina
 
                     </p>
 
