@@ -59,7 +59,7 @@ export default function InstagramSection() {
             <span className="text-xl">📸</span>
 
             <span className="font-medium">
-              @Luna_Rosa
+              @Luna_Rosa_Ropa_Femenina
             </span>
           </div>
 
