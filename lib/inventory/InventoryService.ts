@@ -68,14 +68,14 @@ export class InventoryService {
   static async discountStock(
     items: InventoryItem[],
     orderId: string,
-    orderNumber?: string
+    order_number?: string
   ) {
     for (const item of items) {
       if (item.variant_id) {
         await this.discountVariant(
           item,
           orderId,
-          orderNumber
+          order_number
         );
 
         continue;
@@ -84,14 +84,14 @@ export class InventoryService {
       await this.discountProduct(
         item,
         orderId,
-        orderNumber
+        order_number
       );
     }
   }
     private static async discountVariant(
     item: InventoryItem,
     orderId: string,
-    orderNumber?: string
+    order_number?: string
   ) {
     const variant =
       await InventoryRepository.findVariant(
@@ -117,7 +117,7 @@ export class InventoryService {
         reference:
           orderId,
         notes: `Venta pedido ${
-          orderNumber ??
+          order_number ??
           orderId
         }`,
       });
@@ -139,7 +139,7 @@ export class InventoryService {
   private static async discountProduct(
     item: InventoryItem,
     orderId: string,
-    orderNumber?: string
+    order_number?: string
   ) {
     const product =
       await InventoryRepository.findProduct(
@@ -192,7 +192,7 @@ export class InventoryService {
       reference:
         orderId,
       notes: `Venta pedido ${
-        orderNumber ??
+        order_number ??
         orderId
       }`,
     });

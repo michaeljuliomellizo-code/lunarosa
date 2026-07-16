@@ -81,7 +81,7 @@ export default function OrderItemsCard({
                     className="object-cover w-full h-full"
                   />
                 ) : (
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-500">
                     Sin imagen
                   </span>
                 )}
@@ -93,7 +93,7 @@ export default function OrderItemsCard({
                     "Producto"}
                 </h3>
 
-                <div className="mt-2 space-y-1 text-sm text-gray-600">
+                <div className="mt-2 space-y-1 text-sm text-gray-700">
                   {variant?.color && (
                     <p>
                       <strong>
@@ -135,7 +135,7 @@ export default function OrderItemsCard({
 
               <div className="text-right flex flex-col justify-between">
                 <div>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-600">
                     Subtotal
                   </p>
 
@@ -161,7 +161,7 @@ export default function OrderItemsCard({
 
       <div className="mt-8 border-t pt-6">
         <div className="flex justify-between mb-3">
-          <span className="text-gray-600">
+          <span className="text-gray-700">
             Subtotal
           </span>
 
@@ -176,7 +176,7 @@ export default function OrderItemsCard({
         </div>
 
         <div className="flex justify-between mb-3">
-          <span className="text-gray-600">
+          <span className="text-gray-700">
             Envío
           </span>
 

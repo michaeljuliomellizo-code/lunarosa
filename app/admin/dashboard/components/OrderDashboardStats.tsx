@@ -140,7 +140,7 @@ export default function OrderDashboardStats() {
           key={card.title}
           className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition"
         >
-          <div className="text-gray-500 text-sm">
+          <div className="text-gray-600 text-sm">
             {card.title}
           </div>
 

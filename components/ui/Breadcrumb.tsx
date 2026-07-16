@@ -12,7 +12,7 @@ export default function Breadcrumb({
 }: Props) {
 
   return (
-    <div className="flex gap-2 text-sm text-gray-500">
+    <div className="flex gap-2 text-sm text-gray-600">
 
       {items.map((item, index) => (
         <div

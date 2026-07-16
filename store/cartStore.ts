@@ -68,7 +68,7 @@ export const useCartStore =
         couponCode: null,
 
         discountPercent: 0,
-
+        
         addItem: (item) =>
           set((state) => {
 

@@ -68,7 +68,7 @@ export default async function OrdersPage() {
             text-center
           "
         >
-          <p className="text-lg text-gray-500">
+          <p className="text-lg text-gray-600">
             Aún no tienes pedidos realizados.
           </p>
         </div>

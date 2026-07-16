@@ -16,7 +16,7 @@ export default function UserOrders() {
               Pedido #1001
             </p>
 
-            <p className="text-gray-500">
+            <p className="text-gray-600">
               Enviado
             </p>
           </div>

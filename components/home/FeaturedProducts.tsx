@@ -46,7 +46,7 @@ export default async function FeaturedProducts() {
 
             <p
               className="
-                text-gray-600
+                text-gray-700
                 mt-2
                 text-sm
                 md:text-base

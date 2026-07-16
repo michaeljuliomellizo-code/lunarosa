@@ -37,7 +37,7 @@ export default function TopCustomers({
                   }
                 </p>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-600">
                   {
                     customer.email
                   }
@@ -53,7 +53,7 @@ export default function TopCustomers({
                   ).toLocaleString()}
                 </p>
 
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-600">
                   {
                     customer.total_orders
                   }{" "}
@@ -66,7 +66,7 @@ export default function TopCustomers({
 
         {customers?.length ===
           0 && (
-          <p className="text-gray-500">
+          <p className="text-gray-600">
             No hay clientes
             registrados
           </p>

@@ -68,7 +68,7 @@ export default function ExportButtons({
             Exportar Reportes
           </h2>
 
-          <p className="text-gray-500 mt-1">
+          <p className="text-gray-600 mt-1">
             Descarga el reporte utilizando
             los filtros actualmente
             seleccionados.

@@ -26,7 +26,7 @@ export default function ProductInfo({
         <ProductPrice price={product.price} />
       </div>
 
-      <p className="mt-6 text-gray-600 leading-relaxed">
+      <p className="mt-6 text-gray-700 leading-relaxed">
         {product.description}
       </p>
 

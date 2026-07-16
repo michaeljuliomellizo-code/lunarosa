@@ -22,7 +22,7 @@ export default async function Testimonials() {
             Testimonios
           </h2>
 
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-700">
             Opiniones reales de
             nuestras clientas
           </p>
@@ -57,7 +57,7 @@ export default async function Testimonials() {
                   )}
                 </div>
 
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   "
                   {review.comment}
                   "
@@ -70,7 +70,7 @@ export default async function Testimonials() {
                     }
                   </h3>
 
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-500">
                     Cliente
                     verificado
                   </p>
@@ -87,7 +87,7 @@ export default async function Testimonials() {
                 py-10
               "
             >
-              <p className="text-gray-500">
+              <p className="text-gray-600">
                 Aún no hay
                 reseñas disponibles.
               </p>

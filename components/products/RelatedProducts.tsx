@@ -127,7 +127,7 @@ export default async function RelatedProducts({
                   {product.compare_price && (
                     <p
                       className="
-                        text-gray-400
+                        text-gray-500
                         line-through
                         text-sm
                       "

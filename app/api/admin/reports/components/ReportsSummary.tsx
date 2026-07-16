@@ -157,7 +157,7 @@ export default function ReportsSummary({
             key={card.title}
             className="bg-white rounded-xl shadow p-6"
           >
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-600 text-sm">
               {card.title}
             </p>
 

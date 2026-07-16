@@ -84,7 +84,7 @@ export default function AdminSidebar() {
           Luna Rosa
         </h2>
 
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-600 text-sm">
           Panel Administrativo
         </p>
       </div>
@@ -105,7 +105,7 @@ export default function AdminSidebar() {
                   ${
                     pathname === item.href
                       ? "bg-pink-500 text-white"
-                      : "text-gray-700 hover:bg-pink-100"
+                      : "text-gray-800 hover:bg-pink-100"
                   }
                 `}
               >

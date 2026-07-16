@@ -36,7 +36,7 @@ export default async function Categories() {
             Categorías
           </h2>
 
-          <p className="text-gray-500 mt-3 text-base md:text-lg">
+          <p className="text-gray-600 mt-3 text-base md:text-lg">
             Descubre nuestras colecciones exclusivas
           </p>
         </div>

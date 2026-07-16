@@ -17,7 +17,7 @@ export default function Promotions() {
               30% OFF
             </h2>
 
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-gray-800">
               En pijamas y lencería seleccionada.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function Promotions() {
               Hasta 50% OFF
             </h2>
 
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-gray-800">
               Aprovecha nuestras promociones especiales.
             </p>
           </div>

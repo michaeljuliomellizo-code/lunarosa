@@ -63,7 +63,7 @@ export default function OrderCard({
         {Number(order.total).toLocaleString()}
       </p>
 
-      <p className="text-gray-500 text-sm mt-2">
+      <p className="text-gray-600 text-sm mt-2">
         {new Date(order.created_at).toLocaleDateString()}
       </p>
     </Link>

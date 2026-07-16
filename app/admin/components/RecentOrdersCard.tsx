@@ -15,7 +15,7 @@ import {
 
 interface RecentOrder {
   id: string;
-  orderNumber: string;
+  order_number: string;
 
   customer_name: string;
   customer_email: string;
@@ -202,11 +202,11 @@ export default function RecentOrdersCard() {
       </div>
 
       {loading ? (
-        <div className="py-12 text-center text-gray-500">
+        <div className="py-12 text-center text-gray-600">
           Cargando pedidos...
         </div>
       ) : orders.length === 0 ? (
-        <div className="py-12 text-center text-gray-500">
+        <div className="py-12 text-center text-gray-600">
           No existen pedidos.
         </div>
       ) : (
@@ -263,7 +263,7 @@ export default function RecentOrdersCard() {
                     className="border-b hover:bg-gray-50"
                   >
                     <td className="px-4 py-4 font-medium">
-                      {order.orderNumber ??
+                      {order.order_number ??
                         order.id.substring(
                           0,
                           8
@@ -277,7 +277,7 @@ export default function RecentOrdersCard() {
                         }
                       </div>
 
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-600">
                         {
                           order.customer_email
                         }

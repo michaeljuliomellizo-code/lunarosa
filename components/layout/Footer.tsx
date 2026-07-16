@@ -38,7 +38,7 @@ export default function Footer() {
               Luna Rosa
             </h2>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-700">
               Moda femenina elegante y cómoda.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
               Categorías
             </h3>
 
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-700">
 
               <li>Bodys</li>
               
@@ -64,7 +64,7 @@ export default function Footer() {
               Ayuda
             </h3>
 
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-700">
 
               <li>
                 <Link href="/contacto">
@@ -93,7 +93,7 @@ export default function Footer() {
               Contacto
             </h3>
 
-            <div className="space-y-3 text-gray-600">
+            <div className="space-y-3 text-gray-700">
 
               <p>
                 WhatsApp: 3123851338
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t mt-10 pt-6 text-center text-gray-500">
+        <div className="border-t mt-10 pt-6 text-center text-gray-600">
           © 2026 Luna Rosa - Todos los derechos reservados
         </div>
       </div>

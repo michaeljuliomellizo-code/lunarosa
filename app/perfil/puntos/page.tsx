@@ -96,7 +96,7 @@ export default async function LoyaltyPage() {
                   }
                 </h3>
 
-                <p className="text-gray-600 mt-3">
+                <p className="text-gray-700 mt-3">
                   {
                     reward.description
                   }

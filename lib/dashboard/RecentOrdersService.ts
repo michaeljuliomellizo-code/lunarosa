@@ -7,7 +7,7 @@ const supabase = createClient(
 
 export interface RecentOrder {
   id: string;
-  orderNumber: string;
+  order_number: string;
 
   customer_name: string;
   customer_email: string;
@@ -67,7 +67,7 @@ export class RecentOrdersService {
         (order: any) => ({
           id: order.id,
 
-          orderNumber:
+          order_number:
             order.id,
 
           customer_name:
@@ -134,7 +134,7 @@ export class RecentOrdersService {
     return {
       id: data.id,
 
-      orderNumber:
+      order_number:
         data.id,
 
       customer_name:

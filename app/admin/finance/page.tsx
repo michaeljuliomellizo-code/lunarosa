@@ -29,7 +29,7 @@ interface PaymentMethod {
 
 interface Receivable {
   id: string;
-  orderNumber: string;
+  order_number: string;
   customer: string;
   email: string;
   total: number;
@@ -136,7 +136,7 @@ export default function FinancePage() {
           Centro Financiero
         </h1>
 
-        <p className="text-gray-500">
+        <p className="text-gray-600">
           Estado financiero de Luna Rosa
         </p>
       </div>
@@ -327,7 +327,7 @@ export default function FinancePage() {
                 className="border-b"
               >
                 <td className="py-2">
-                  {item.orderNumber}
+                  {item.order_number}
                 </td>
 
                 <td>
@@ -368,7 +368,7 @@ function FinanceCard({
   return (
     <div className="rounded-xl bg-white shadow p-5">
 
-      <p className="text-gray-500 text-sm">
+      <p className="text-gray-600 text-sm">
         {title}
       </p>
 

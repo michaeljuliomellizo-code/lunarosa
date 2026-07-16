@@ -15,7 +15,7 @@ export default function EmptyState({
         {title}
       </h2>
 
-      <p className="text-gray-500 mt-4">
+      <p className="text-gray-600 mt-4">
         {description}
       </p>
     </div>

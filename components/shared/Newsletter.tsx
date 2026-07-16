@@ -9,7 +9,7 @@ export default function Newsletter() {
         Suscríbete
       </h2>
 
-      <p className="mt-4 text-gray-600">
+      <p className="mt-4 text-gray-700">
         Recibe promociones y novedades.
       </p>
 

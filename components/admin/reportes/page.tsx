@@ -95,14 +95,14 @@ export default async function ReportsPage() {
           Reportes
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           Analítica del negocio
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-gray-500">
+          <h3 className="text-gray-600">
             Ventas
           </h3>
 
@@ -113,7 +113,7 @@ export default async function ReportsPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-gray-500">
+          <h3 className="text-gray-600">
             Pedidos
           </h3>
 
@@ -123,7 +123,7 @@ export default async function ReportsPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-gray-500">
+          <h3 className="text-gray-600">
             Ticket Promedio
           </h3>
 

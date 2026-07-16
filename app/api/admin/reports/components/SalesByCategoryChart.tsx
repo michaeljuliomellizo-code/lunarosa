@@ -119,7 +119,7 @@ export default function SalesByCategoryChart({
       </h2>
 
       {data.length === 0 ? (
-        <div className="flex items-center justify-center h-[320px] text-gray-500">
+        <div className="flex items-center justify-center h-[320px] text-gray-600">
           No hay datos disponibles.
         </div>
       ) : (

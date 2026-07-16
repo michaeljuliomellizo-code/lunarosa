@@ -21,6 +21,10 @@ export interface CreateOrderInput {
 
   customer_phone?: string;
 
+  department: string;
+
+  municipality: string;
+
   shipping_address: string;
 
   notes?: string;
@@ -42,18 +46,23 @@ export interface CreateOrderInput {
   total: number;
 
   items: OrderItemInput[];
+
 }
 
 export interface OrderSummary {
   id: string;
 
-  orderNumber: string;
+  order_number: string;
 
   customer_name: string;
 
   customer_email: string;
 
   customer_phone?: string | null;
+
+  department?: string | null;
+
+  municipality?: string | null;
 
   shipping_address?: string | null;
 
@@ -123,4 +132,69 @@ export interface OrderWithRelations
   order_items: OrderItem[];
 
   order_status_history?: any[];
+}
+
+export interface OrderEmailData {
+  id: string;
+
+  order_number: string;
+
+  customer_name: string;
+
+  customer_email: string;
+
+  customer_phone?: string | null;
+
+  department: string | null;
+
+  municipality: string | null;
+
+  shipping_address: string | null;
+
+  notes?: string | null;
+
+  subtotal: number;
+
+  shipping: number;
+
+  total: number;
+
+  coupon_code?: string | null;
+
+  referral_code?: string | null;
+
+  payment_method: PaymentMethod;
+
+  payment_reference?: string | null;
+
+  payment_proof?: string | null;
+
+  payment_status: PaymentStatus;
+
+  status: OrderStatus;
+
+  rejection_reason?: string | null;
+
+  shipped_at?: string | null;
+
+  delivered_at?: string | null;
+
+  created_at: string;
+
+  updated_at?: string;
+
+  order_items: {
+    quantity: number;
+    price: number;
+
+    products: {
+      name: string;
+      image?: string | null;
+    };
+
+    product_variants?: {
+      color?: string | null;
+      size?: string | null;
+    };
+  }[];
 }

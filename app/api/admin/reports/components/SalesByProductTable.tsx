@@ -101,7 +101,7 @@ export default function SalesByProductTable({
       </h2>
 
       {products.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-600">
           No existen ventas para el período seleccionado.
         </div>
       ) : (
@@ -159,7 +159,7 @@ export default function SalesByProductTable({
                         }
                       </div>
 
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-600">
                         {
                           product.slug
                         }

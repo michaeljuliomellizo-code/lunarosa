@@ -10,7 +10,7 @@ export default function ReportsPage() {
           Centro de Reportes
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           Reportes comerciales y estadísticas de ventas.
         </p>
 

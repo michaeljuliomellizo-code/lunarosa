@@ -102,7 +102,7 @@ export default async function PerfilPage() {
                 Mi Perfil
               </h1>
 
-              <p className="text-gray-500 mt-2">
+              <p className="text-gray-600 mt-2">
                 Gestiona tu cuenta y pedidos
               </p>
 
@@ -179,7 +179,7 @@ export default async function PerfilPage() {
 
               <div className="space-y-5">
                 <div>
-                  <label className="block text-sm text-gray-500 mb-1">
+                  <label className="block text-sm text-gray-600 mb-1">
                     Nombre
                   </label>
 
@@ -205,7 +205,7 @@ export default async function PerfilPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-500 mb-1">
+                  <label className="block text-sm text-gray-600 mb-1">
                     Correo
                   </label>
 
@@ -227,7 +227,7 @@ export default async function PerfilPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-500 mb-1">
+                  <label className="block text-sm text-gray-600 mb-1">
                     Teléfono
                   </label>
 

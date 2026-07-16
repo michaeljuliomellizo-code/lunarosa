@@ -9,7 +9,7 @@ export default function CartEmpty() {
         Tu carrito está vacío
       </h2>
 
-      <p className="text-gray-600 mt-4">
+      <p className="text-gray-700 mt-4">
         Agrega productos para continuar.
       </p>
 

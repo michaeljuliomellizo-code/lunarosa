@@ -26,7 +26,7 @@ export default async function LoyaltyAdminPage() {
           Fidelización VIP
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           Clientes más valiosos
         </p>
       </div>

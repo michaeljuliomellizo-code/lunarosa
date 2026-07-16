@@ -631,7 +631,7 @@ Errores: ${result.errors}`
 
           </div>
 
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-700">
 
             Importando...
 

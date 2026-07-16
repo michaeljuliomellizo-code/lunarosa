@@ -159,7 +159,7 @@ export async function POST(
     );
 
     await OrderNotificationService.orderShipped({
-        orderNumber: order.order_number,
+        order_number: order.order_number,
         customerName: order.customer_name,
         customerEmail: order.customer_email,
         //trackingNumber: order.tracking_number,

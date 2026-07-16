@@ -294,7 +294,7 @@ export class FinanceRepository {
     return data?.map(
       (order) => ({
         id: order.id,
-        orderNumber:
+        order_number:
           order.order_number,
         customer:
           order.customer_name,

@@ -465,7 +465,7 @@ export default function ProductVariantsManager({
             Variantes del Producto
           </h2>
 
-          <p className="text-gray-500 mt-1">
+          <p className="text-gray-600 mt-1">
             Administra colores,
             tallas, inventario,
             imágenes y precios.
@@ -505,7 +505,7 @@ export default function ProductVariantsManager({
 
         <div className="bg-white rounded-xl border shadow-sm p-5">
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Variantes
           </p>
 
@@ -517,7 +517,7 @@ export default function ProductVariantsManager({
 
         <div className="bg-white rounded-xl border shadow-sm p-5">
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Activas
           </p>
 
@@ -531,7 +531,7 @@ export default function ProductVariantsManager({
 
         <div className="bg-white rounded-xl border shadow-sm p-5">
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Inventario
           </p>
 
@@ -868,7 +868,7 @@ export default function ProductVariantsManager({
               {variant.color} · {variant.size}
             </h3>
 
-            <p className="text-gray-500 text-sm mt-1">
+            <p className="text-gray-600 text-sm mt-1">
               SKU: {variant.sku || "-"}
             </p>
 
@@ -886,7 +886,7 @@ export default function ProductVariantsManager({
                 ${
                   variant.active
                     ? "bg-green-100 text-green-700"
-                    : "bg-gray-200 text-gray-600"
+                    : "bg-gray-200 text-gray-700"
                 }
               `}
             >
@@ -949,7 +949,7 @@ export default function ProductVariantsManager({
                   flex
                   items-center
                   justify-center
-                  text-gray-400
+                  text-gray-500
                 "
               >
                 Sin imagen
@@ -1229,7 +1229,7 @@ export default function ProductVariantsManager({
 
   })}
         {variants.length === 0 && (
-        <div className="text-center py-16 text-gray-500">
+        <div className="text-center py-16 text-gray-600">
           No existen variantes para este producto.
         </div>
       )}

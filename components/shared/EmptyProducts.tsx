@@ -7,7 +7,7 @@ export default function EmptyProducts() {
         No hay productos
       </h2>
 
-      <p className="text-gray-500 mt-4">
+      <p className="text-gray-600 mt-4">
         Pronto tendremos nuevos productos disponibles.
       </p>
     </div>

@@ -75,7 +75,7 @@ export default function OrderTable({
               <tr>
                 <td
                   colSpan={8}
-                  className="py-12 text-center text-gray-500"
+                  className="py-12 text-center text-gray-600"
                 >
                   No existen pedidos.
                 </td>
@@ -93,7 +93,7 @@ export default function OrderTable({
                       order.id.slice(0, 8)}
                   </div>
 
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-gray-600">
                     {order.id}
                   </div>
                 </td>
@@ -103,7 +103,7 @@ export default function OrderTable({
                     {order.customer_name}
                   </div>
 
-                  <div className="text-sm text-gray-500">
+                  <div className="text-sm text-gray-600">
                     {order.customer_email}
                   </div>
                 </td>

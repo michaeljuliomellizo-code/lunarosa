@@ -85,7 +85,7 @@ export default function ContactPage() {
                 sm:mt-8
                 text-base
                 sm:text-lg
-                text-gray-600
+                text-gray-700
                 leading-7
                 sm:leading-8
               "
@@ -115,7 +115,7 @@ export default function ContactPage() {
 
                     </h3>
 
-                    <p className="text-gray-500">
+                    <p className="text-gray-600">
 
                       @Luna_Rosa_Ropa_Femenina
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
 
                     </h3>
 
-                    <p className="text-gray-500">
+                    <p className="text-gray-600">
 
                       +57 312 385 1338
 
@@ -199,7 +199,7 @@ export default function ContactPage() {
 
               </div>
 
-              <p className="text-gray-600 leading-8">
+              <p className="text-gray-700 leading-8">
 
                 Queremos que disfrutes la mejor experiencia de compra.
                 Escríbenos y con gusto resolveremos cualquier inquietud sobre

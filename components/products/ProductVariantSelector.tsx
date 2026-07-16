@@ -180,7 +180,7 @@ export default function ProductVariantSelector({
 
             <p
               className="
-                text-gray-500
+                text-gray-600
                 text-sm
                 break-all
               "
@@ -212,7 +212,7 @@ export default function ProductVariantSelector({
             className="
               w-full
               bg-gray-300
-              text-gray-600
+              text-gray-700
               py-3
               rounded-xl
               font-semibold

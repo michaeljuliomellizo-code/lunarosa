@@ -1,11 +1,12 @@
+import { OrderEmailData } from "@/lib/order/types";
+
 export function orderConfirmationEmail(
-  orderId: string,
-  total: number
+  order: OrderEmailData
 ) {
-  const trackingUrl =
+    const trackingUrl =
     process.env.NEXT_PUBLIC_SITE_URL
-      ? `${process.env.NEXT_PUBLIC_SITE_URL}/pedido/${orderId}`
-      : `http://localhost:3000/pedido/${orderId}`;
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}/pedido/${order.order_number}`
+      : `http://localhost:3000/pedido/${order.order_number}`;
 
   return `
   <div
@@ -80,19 +81,18 @@ export function orderConfirmationEmail(
       <p>
         <strong>Número de Pedido:</strong>
         <br/>
-        ${orderId}
+        ${order.order_number}
       </p>
 
       <p>
         <strong>Total:</strong>
         <br/>
-        $${Number(total).toLocaleString()}
+        $${Number(order.total).toLocaleString()}
       </p>
 
       <p>
-        <strong>Estado:</strong>
-        <br/>
-        Pendiente
+      <strong>Estado:</strong><br/>
+      Pendiente
       </p>
 
       <hr
@@ -143,18 +143,9 @@ export function orderConfirmationEmail(
       </p>
 
       <ul>
-        <li>
-          Nequi: 3001234567
-        </li>
-
-        <li>
-          Daviplata: 3001234567
-        </li>
-
-        <li>
-          Bancolombia Ahorros:
-          1234567890
-        </li>
+        <li>Nequi: 3123851338</li>
+        <li>Daviplata: 3123851338</li>
+        <li>Llave: 3204095701</li>
       </ul>
 
       <p>

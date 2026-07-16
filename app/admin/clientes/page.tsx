@@ -23,7 +23,7 @@ export default async function CustomersPage() {
           Clientes
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           CRM de clientes
         </p>
       </div>

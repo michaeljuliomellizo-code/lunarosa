@@ -110,7 +110,7 @@ export default function CategoryTable({
                     className={`px-3 py-1 rounded-full text-sm ${
                       category.is_active
                         ? "bg-green-100 text-green-700"
-                        : "bg-gray-100 text-gray-600"
+                        : "bg-gray-100 text-gray-700"
                     }`}
                   >
                     {category.is_active

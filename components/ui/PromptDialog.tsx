@@ -130,7 +130,7 @@ export default function PromptDialog({
           </h2>
 
           {description && (
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               {description}
             </p>
           )}

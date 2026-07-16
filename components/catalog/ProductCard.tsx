@@ -93,7 +93,7 @@ export default function ProductCard({
             <span
               className="
                 line-through
-                text-gray-400
+                text-gray-500
                 text-xs
                 sm:text-sm
               "

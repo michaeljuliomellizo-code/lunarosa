@@ -305,12 +305,12 @@ export default function PublicOrderDetail({
                 </p>
 
                 {history.notes && (
-                  <p className="text-gray-600">
+                  <p className="text-gray-700">
                     {history.notes}
                   </p>
                 )}
 
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-500">
                   {new Date(
                     history.created_at
                   ).toLocaleString()}

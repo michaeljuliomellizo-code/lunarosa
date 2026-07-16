@@ -86,7 +86,7 @@ export default function ConfirmDialog({
           </h2>
 
           {description && (
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-700">
               {description}
             </p>
           )}

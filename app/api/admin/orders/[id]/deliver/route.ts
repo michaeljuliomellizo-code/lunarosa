@@ -102,7 +102,7 @@ export async function POST(
     );
 
     await OrderNotificationService.orderDelivered({
-        orderNumber: order.order_number,
+        order_number: order.order_number,
         customerName: order.customer_name,
         customerEmail: order.customer_email,
     });

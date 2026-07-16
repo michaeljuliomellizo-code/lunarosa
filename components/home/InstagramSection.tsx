@@ -68,7 +68,7 @@ export default function InstagramSection() {
             nuestras clientes
           </h2>
 
-          <p className="text-gray-500 mt-4 text-lg">
+          <p className="text-gray-600 mt-4 text-lg">
             Looks reales,
             tendencias y
             novedades

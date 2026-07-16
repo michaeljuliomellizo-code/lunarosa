@@ -9,7 +9,7 @@ export default function AdminHeader() {
           Panel Administrativo
         </h1>
 
-        <p className="text-gray-500">
+        <p className="text-gray-600">
           Gestión completa de la tienda
         </p>
       </div>
@@ -23,7 +23,7 @@ export default function AdminHeader() {
             Administrador
           </p>
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Luna Rosa
           </p>
         </div>

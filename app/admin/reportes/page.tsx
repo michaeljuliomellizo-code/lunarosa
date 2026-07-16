@@ -46,7 +46,7 @@ export default async function ReportsPage() {
           Reportes
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           Analítica y métricas
           del negocio
         </p>

@@ -59,7 +59,7 @@ export default function RevenueCards({
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <div className="bg-white rounded-xl shadow p-6">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Ventas del Mes
         </h3>
 
@@ -70,7 +70,7 @@ export default function RevenueCards({
       </div>
 
       <div className="bg-white rounded-xl shadow p-6">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Ticket Promedio
         </h3>
 
@@ -83,7 +83,7 @@ export default function RevenueCards({
       </div>
 
       <div className="bg-white rounded-xl shadow p-6">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Ventas Totales
         </h3>
 

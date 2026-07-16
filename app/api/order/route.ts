@@ -19,7 +19,11 @@ export async function POST(req: Request) {
       customer_name,
       customer_email,
       customer_phone,
+      
+      department,
+      municipality,
       shipping_address,
+
       notes,
       subtotal,
       shipping,
@@ -62,7 +66,11 @@ export async function POST(req: Request) {
       customer_name,
       customer_email,
       customer_phone,
+
+      department,
+      municipality,
       shipping_address,
+
       notes,
       subtotal,
       shipping,
@@ -78,7 +86,7 @@ export async function POST(req: Request) {
     return NextResponse.json({
       success: true,
       orderId: order.id,
-      orderNumber: order.orderNumber,
+      order_number: order.order_number,
       paymentStatus: order.payment_status,
       status: order.status,
     });

@@ -25,6 +25,7 @@ export default function SimpleAddToCartButton({
     useState(false);
 
   function handleAdd() {
+    
     addItem({
       id: product.id,
       name: product.name,

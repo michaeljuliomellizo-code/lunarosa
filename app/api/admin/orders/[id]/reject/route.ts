@@ -109,7 +109,7 @@ export async function POST(
     );
 
     await OrderNotificationService.paymentRejected({
-        orderNumber: order.order_number,
+        order_number: order.order_number,
         customerName: order.customer_name,
         customerEmail: order.customer_email,
         reason: order.rejection_reason,

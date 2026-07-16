@@ -42,7 +42,7 @@ export default async function PaymentPage({
                     className="
                         text-sm
                         sm:text-base
-                        text-gray-500
+                        text-gray-600
                         mt-2
                     "
                     >

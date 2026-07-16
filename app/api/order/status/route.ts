@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
         orderId: order.id,
 
-        orderNumber: order.orderNumber,
+        order_number: order.order_number,
 
         paymentStatus: order.payment_status,
 

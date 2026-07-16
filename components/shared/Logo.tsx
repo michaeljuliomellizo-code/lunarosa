@@ -22,7 +22,7 @@ export default function Logo() {
           Luna Rosa
         </h1>
 
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-600">
           Moda femenina
         </p>
       </div>

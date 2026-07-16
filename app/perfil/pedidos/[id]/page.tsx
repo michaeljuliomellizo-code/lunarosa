@@ -129,7 +129,7 @@ export default async function OrderDetailPage({
             </div>
 
             <div className="flex justify-between">
-              <span>Envío</span>
+              <span>Envíooooo</span>
 
               <span>
                 $

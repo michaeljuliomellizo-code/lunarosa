@@ -96,7 +96,7 @@ export class PaymentService {
         order.customer_email,
       customerName:
         order.customer_name,
-      orderNumber:
+      order_number:
         order.order_number ??
         order.id,
     });
@@ -145,7 +145,7 @@ export class PaymentService {
         order.customer_email,
       customerName:
         order.customer_name,
-      orderNumber:
+      order_number:
         order.order_number ??
         order.id,
       reason,
@@ -187,7 +187,7 @@ export class PaymentService {
         order.customer_email,
       customerName:
         order.customer_name,
-      orderNumber:
+      order_number:
         order.order_number ??
         order.id,
     });
@@ -229,7 +229,7 @@ export class PaymentService {
         order.customer_email,
       customerName:
         order.customer_name,
-      orderNumber:
+      order_number:
         order.order_number ??
         order.id,
     });

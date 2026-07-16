@@ -45,7 +45,7 @@ export default function SalesChart({
             Flujo de Caja
           </h2>
 
-          <p className="text-gray-500">
+          <p className="text-gray-600">
             Evolución diaria
           </p>
 
@@ -53,7 +53,7 @@ export default function SalesChart({
 
         <div className="text-right">
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Total
           </p>
 
@@ -109,7 +109,7 @@ export default function SalesChart({
 
         <div className="bg-pink-50 rounded-lg p-4">
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-600 text-sm">
             Registros
           </p>
 
@@ -121,7 +121,7 @@ export default function SalesChart({
 
         <div className="bg-green-50 rounded-lg p-4">
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-600 text-sm">
             Promedio Diario
           </p>
 

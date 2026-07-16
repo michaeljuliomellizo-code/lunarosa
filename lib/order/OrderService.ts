@@ -64,6 +64,11 @@ export class OrderService {
         input.items
       );
 
+      const fullOrder =
+      await OrderRepository.findWithRelations(
+        order.id
+      );
+
       //-----------------------------------------
       // Historial
       //-----------------------------------------
@@ -136,29 +141,15 @@ export class OrderService {
 
       try {
 
-        await OrderNotificationService.orderCreated({
-
-          orderId: order.id,
-
-          orderNumber:
-            order.order_number,
-
-          customerName:
-            order.customer_name,
-
-          customerEmail:
-            order.customer_email,
-
-          total:
-            Number(order.total)
-
-        });
+        await OrderNotificationService.orderCreated(
+          fullOrder
+        );
 
       } catch {}
 
       //-----------------------------------------
 
-      return order as OrderSummary;
+      return fullOrder as OrderSummary;
 
     } catch (error) {
 

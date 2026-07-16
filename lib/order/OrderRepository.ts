@@ -31,6 +31,8 @@ export class OrderRepository {
       payment_method,
       payment_reference,
       payment_proof,
+      department,
+      municipality,
     } = input;
 
     const { data, error } =
@@ -40,6 +42,8 @@ export class OrderRepository {
           customer_name,
           customer_email,
           phone: customer_phone,
+          department,
+          municipality,
           shipping_address,
           notes,
           subtotal,
@@ -62,10 +66,14 @@ export class OrderRepository {
         .single();
 
     if (error) {
-       throw new Error(error.message);
+      throw new Error(error.message);
     }
 
-    return data;
+    return {
+      ...data,
+      order_number: data.order_number,
+      customer_phone: data.phone,
+    };
   }
 
   static async findById(

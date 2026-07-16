@@ -32,7 +32,7 @@ export default function ProductReviews({
     reviews.length === 0
   ) {
     return (
-      <div className="text-center py-8 text-gray-500">
+      <div className="text-center py-8 text-gray-600">
         Aún no hay opiniones para este producto.
       </div>
     );
@@ -59,7 +59,7 @@ export default function ProductReviews({
                     "Cliente"}
                 </h4>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-600">
                   {new Date(
                     review.created_at
                   ).toLocaleDateString()}
@@ -74,7 +74,7 @@ export default function ProductReviews({
 
             </div>
 
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-gray-800">
               {review.comment}
             </p>
 

@@ -120,7 +120,7 @@ export default function ProductTable() {
           Productos
         </h2>
 
-        <span className="text-sm text-gray-500">
+        <span className="text-sm text-gray-600">
           {products.length} productos
         </span>
       </div>
@@ -325,7 +325,7 @@ export default function ProductTable() {
         </table>
 
         {products.length === 0 && (
-          <p className="text-center py-10 text-gray-500">
+          <p className="text-center py-10 text-gray-600">
             No hay productos registrados
           </p>
         )}

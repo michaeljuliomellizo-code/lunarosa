@@ -40,7 +40,7 @@ export default async function OrderDetailPage({
               order.id.slice(0, 8)}
           </h1>
 
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-600 mt-2">
             Información completa del
             pedido
           </p>

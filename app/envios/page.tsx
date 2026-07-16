@@ -56,7 +56,7 @@ export default function EnviosPage() {
 
             </h1>
 
-            <p className="mt-8 text-lg text-gray-600 leading-8">
+            <p className="mt-8 text-lg text-gray-700 leading-8">
 
               En Luna Rosa queremos que recibas tus prendas favoritas
               de forma rápida, segura y confiable.
@@ -147,7 +147,7 @@ export default function EnviosPage() {
               Bogotá
             </h2>
 
-            <p className="mt-5 text-gray-600 leading-7">
+            <p className="mt-5 text-gray-700 leading-7">
 
               Todos los pedidos con destino en Bogotá tienen una tarifa
               fija de envío.
@@ -156,7 +156,7 @@ export default function EnviosPage() {
 
             <div className="mt-8 bg-pink-50 rounded-2xl p-6 text-center">
 
-              <p className="text-gray-500">
+              <p className="text-gray-600">
                 Valor del envío
               </p>
 
@@ -187,7 +187,7 @@ export default function EnviosPage() {
 
             </h2>
 
-            <p className="mt-5 text-gray-600 leading-7">
+            <p className="mt-5 text-gray-700 leading-7">
 
               Enviamos a cualquier ciudad de Colombia mediante
               transportadoras nacionales.
@@ -202,7 +202,7 @@ export default function EnviosPage() {
 
               </p>
 
-              <p className="mt-4 text-gray-600 leading-7">
+              <p className="mt-4 text-gray-700 leading-7">
 
                 El costo depende de la ciudad o municipio de destino y
                 será calculado antes de finalizar tu compra.

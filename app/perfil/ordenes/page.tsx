@@ -54,7 +54,7 @@ export default async function OrdersPage() {
                 Orden #{order.id.slice(0, 8)}
               </p>
 
-              <p className="text-gray-500">
+              <p className="text-gray-600">
                 {new Date(
                   order.created_at
                 ).toLocaleDateString()}

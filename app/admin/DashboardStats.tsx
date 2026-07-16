@@ -128,7 +128,7 @@ export default function DashboardStats() {
     <div className="grid md:grid-cols-5 gap-6">
 
       <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Ventas Hoy
         </h3>
 
@@ -139,7 +139,7 @@ export default function DashboardStats() {
       </div>
 
       <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Ventas Mes
         </h3>
 
@@ -150,7 +150,7 @@ export default function DashboardStats() {
       </div>
 
       <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Pendientes
         </h3>
 
@@ -160,7 +160,7 @@ export default function DashboardStats() {
       </div>
 
       <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Entregados
         </h3>
 
@@ -170,7 +170,7 @@ export default function DashboardStats() {
       </div>
 
       <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-gray-500">
+        <h3 className="text-gray-600">
           Clientes
         </h3>
 

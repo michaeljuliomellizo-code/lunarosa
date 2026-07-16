@@ -2,6 +2,8 @@ import { resend } from "@/lib/resend";
 
 import { orderConfirmationEmail } from "@/lib/email/order-confirmation";
 
+import { OrderEmailData } from "./types";
+
 import { NotificationService } from "@/lib/notification/NotificationService";
 
 export class OrderNotificationService {
@@ -14,7 +16,7 @@ export class OrderNotificationService {
     title: string,
     customerName: string,
     body: string,
-    orderNumber: string
+    order_number: string
   ) {
     return `
 <!DOCTYPE html>
@@ -110,7 +112,7 @@ ${body}
 
 <strong>Pedido:</strong>
 
-${orderNumber}
+${order_number}
 
 </div>
 
@@ -142,55 +144,30 @@ Luna Rosa
   // Pedido Creado
   //--------------------------------------------------------
 
-  static async orderCreated(params: {
-    orderId: string;
-    orderNumber?: string;
-    customerName: string;
-    customerEmail: string;
-    total: number;
-  }) {
-
-    const {
-      orderId,
-      orderNumber,
-      customerName,
-      customerEmail,
-      total,
-    } = params;
-
+  static async orderCreated(
+    order: OrderEmailData
+  ) {
     await NotificationService.newOrder(
-      orderId,
-      customerName
+      order.id,
+      order.customer_name
     );
 
     try {
-
       await resend.emails.send({
+        from: "ventas@lunarosa.store",
 
-        from:
-          "ventas@lunarosa.store",
+        to: order.customer_email,
 
-        to: customerEmail,
+        subject: `Hemos recibido tu pedido #${order.order_number}`,
 
-        subject:
-          `Hemos recibido tu pedido #${orderNumber ?? orderId}`,
-
-        html: orderConfirmationEmail(
-          orderId,
-          total
-        ),
-
+        html: orderConfirmationEmail(order),
       });
-
     } catch (error) {
-
       console.error(
         "ORDER CREATED EMAIL",
         error
       );
-
     }
-
   }
 
   //--------------------------------------------------------
@@ -203,7 +180,7 @@ Luna Rosa
 
     customerName: string;
 
-    orderNumber: string;
+    order_number: string;
 
   }) {
 
@@ -213,7 +190,7 @@ Luna Rosa
 
       customerName,
 
-      orderNumber,
+      order_number,
 
     } = params;
 
@@ -227,7 +204,7 @@ Luna Rosa
         to: customerEmail,
 
         subject:
-          `Estamos preparando tu pedido #${orderNumber}`,
+          `Estamos preparando tu pedido #${order_number}`,
 
         html: this.template(
 
@@ -249,7 +226,7 @@ Muy pronto será enviado.
 </p>
 `,
 
-          orderNumber
+          order_number
 
         ),
 
@@ -272,7 +249,7 @@ Muy pronto será enviado.
 
   static async paymentApproved(params: {
 
-    orderNumber: string;
+    order_number: string;
 
     customerEmail: string;
 
@@ -282,13 +259,13 @@ Muy pronto será enviado.
     const {
       customerEmail,
       customerName,
-      orderNumber,
+      order_number,
     } = params;
 
     
 
     await NotificationService.paymentApproved(
-      orderNumber
+      order_number
     );
 
     try {
@@ -297,7 +274,7 @@ Muy pronto será enviado.
 
         to: customerEmail,
 
-        subject: `Pago aprobado #${orderNumber}`,
+        subject: `Pago aprobado #${order_number}`,
 
         html: `
           <h2>Hola ${customerName}</h2>
@@ -312,7 +289,7 @@ Muy pronto será enviado.
 
           <p>
             Pedido:
-            <strong>${orderNumber}</strong>
+            <strong>${order_number}</strong>
           </p>
 
           <p>
@@ -331,18 +308,18 @@ Muy pronto será enviado.
   static async paymentRejected(params: {
     customerEmail: string;
     customerName: string;
-    orderNumber: string;
+    order_number: string;
     reason?: string;
   }) {
     const {
       customerEmail,
       customerName,
-      orderNumber,
+      order_number,
       reason,
     } = params;
 
     await NotificationService.paymentRejected(
-      orderNumber,
+      order_number,
       reason
     );
 
@@ -352,7 +329,7 @@ Muy pronto será enviado.
 
         to: customerEmail,
 
-        subject: `Pago rechazado #${orderNumber}`,
+        subject: `Pago rechazado #${order_number}`,
 
         html: `
           <h2>Hola ${customerName}</h2>
@@ -370,7 +347,7 @@ Muy pronto será enviado.
 
           <p>
             Pedido:
-            <strong>${orderNumber}</strong>
+            <strong>${order_number}</strong>
           </p>
         `,
       });
@@ -384,16 +361,16 @@ Muy pronto será enviado.
       static async orderShipped(params: {
     customerEmail: string;
     customerName: string;
-    orderNumber: string;
+    order_number: string;
   }) {
     const {
       customerEmail,
       customerName,
-      orderNumber,
+      order_number,
     } = params;
 
     await NotificationService.orderShipped(
-      orderNumber
+      order_number
     );
 
     try {
@@ -402,7 +379,7 @@ Muy pronto será enviado.
 
         to: customerEmail,
 
-        subject: `Tu pedido fue enviado #${orderNumber}`,
+        subject: `Tu pedido fue enviado #${order_number}`,
 
         html: `
           <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto">
@@ -419,7 +396,7 @@ Muy pronto será enviado.
 
             <p>
               <strong>Número de pedido:</strong>
-              ${orderNumber}
+              ${order_number}
             </p>
 
             <p>
@@ -446,16 +423,16 @@ Muy pronto será enviado.
   static async orderDelivered(params: {
     customerEmail: string;
     customerName: string;
-    orderNumber: string;
+    order_number: string;
   }) {
     const {
       customerEmail,
       customerName,
-      orderNumber,
+      order_number,
     } = params;
 
     await NotificationService.orderDelivered(
-      orderNumber
+      order_number
     );
 
     try {
@@ -464,7 +441,7 @@ Muy pronto será enviado.
 
         to: customerEmail,
 
-        subject: `Pedido entregado #${orderNumber}`,
+        subject: `Pedido entregado #${order_number}`,
 
         html: `
           <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto">
@@ -481,7 +458,7 @@ Muy pronto será enviado.
 
             <p>
               <strong>Número de pedido:</strong>
-              ${orderNumber}
+              ${order_number}
             </p>
 
             <p>
@@ -508,18 +485,18 @@ Muy pronto será enviado.
   static async orderCancelled(params: {
     customerEmail: string;
     customerName: string;
-    orderNumber: string;
+    order_number: string;
     reason?: string;
   }) {
     const {
       customerEmail,
       customerName,
-      orderNumber,
+      order_number,
       reason,
     } = params;
 
     await NotificationService.orderCancelled(
-      orderNumber
+      order_number
     );
 
     try {
@@ -528,7 +505,7 @@ Muy pronto será enviado.
 
         to: customerEmail,
 
-        subject: `Pedido cancelado #${orderNumber}`,
+        subject: `Pedido cancelado #${order_number}`,
 
         html: `
           <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto">
@@ -545,7 +522,7 @@ Muy pronto será enviado.
 
             <p>
               <strong>Número de pedido:</strong>
-              ${orderNumber}
+              ${order_number}
             </p>
 
             ${

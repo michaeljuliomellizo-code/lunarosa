@@ -36,6 +36,12 @@ export default function AddToCartButton({
     useState(false);
 
   function handleAdd() {
+    console.log({
+      productId: product.id,
+      variantId: variantId,
+      color: color,
+      size: size,
+    });
     addItem({
       id: product.id,
       variant_id:

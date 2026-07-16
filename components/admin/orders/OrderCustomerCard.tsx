@@ -30,7 +30,7 @@ export default function OrderCustomerCard({
             />
 
             <div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Nombre
               </p>
 
@@ -47,7 +47,7 @@ export default function OrderCustomerCard({
             />
 
             <div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Correo electrónico
               </p>
 
@@ -64,7 +64,7 @@ export default function OrderCustomerCard({
             />
 
             <div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Teléfono
               </p>
 
@@ -83,7 +83,7 @@ export default function OrderCustomerCard({
             />
 
             <div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Dirección de envío
               </p>
 
@@ -95,7 +95,7 @@ export default function OrderCustomerCard({
           </div>
 
           <div>
-            <p className="text-sm text-gray-500 mb-2">
+            <p className="text-sm text-gray-600 mb-2">
               Observaciones
             </p>
 
@@ -105,7 +105,7 @@ export default function OrderCustomerCard({
                   {order.notes}
                 </p>
               ) : (
-                <p className="text-gray-400 italic">
+                <p className="text-gray-500 italic">
                   El cliente no dejó observaciones.
                 </p>
               )}

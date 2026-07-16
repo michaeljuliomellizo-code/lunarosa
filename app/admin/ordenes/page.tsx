@@ -15,7 +15,7 @@ export default async function OrdersPage() {
           Gestión de pedidos
         </h1>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-600 mt-2">
           Consulta y administra los pedidos de la tienda.
         </p>
       </div>

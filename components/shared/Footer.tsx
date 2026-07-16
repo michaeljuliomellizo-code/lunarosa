@@ -13,7 +13,7 @@ export default function Footer() {
             Luna Rosa
           </h2>
 
-          <p className="text-gray-400 mt-4">
+          <p className="text-gray-500 mt-4">
             Moda femenina elegante y cómoda.
           </p>
         </div>

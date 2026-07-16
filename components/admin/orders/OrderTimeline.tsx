@@ -107,14 +107,14 @@ export default function OrderTimeline({
       </h2>
 
       {loading && (
-        <div className="py-10 text-center text-gray-500">
+        <div className="py-10 text-center text-gray-600">
           Cargando historial...
         </div>
       )}
 
       {!loading &&
         history.length === 0 && (
-          <div className="py-10 text-center text-gray-400">
+          <div className="py-10 text-center text-gray-500">
             No existe historial
             para este pedido.
           </div>
@@ -162,7 +162,7 @@ export default function OrderTimeline({
                         )}
                       </h3>
 
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-gray-600">
                         {formatDate(
                           item.created_at
                         )}
@@ -170,14 +170,14 @@ export default function OrderTimeline({
                     </div>
 
                     {item.comment && (
-                      <p className="mt-2 text-gray-700">
+                      <p className="mt-2 text-gray-800">
                         {
                           item.comment
                         }
                       </p>
                     )}
 
-                    <div className="mt-3 flex items-center gap-2 text-sm text-gray-400">
+                    <div className="mt-3 flex items-center gap-2 text-sm text-gray-500">
                       <Circle
                         size={8}
                         fill="currentColor"

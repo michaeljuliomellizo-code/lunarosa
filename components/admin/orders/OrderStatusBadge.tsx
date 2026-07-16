@@ -12,7 +12,7 @@ export default function OrderStatusBadge({
 
   let label = status;
   let className =
-    "bg-gray-100 text-gray-700";
+    "bg-gray-100 text-gray-800";
 
   if (type === "order") {
     switch (normalized) {

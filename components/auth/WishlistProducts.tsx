@@ -7,7 +7,7 @@ export default function WishlistProducts() {
         Favoritos
       </h2>
 
-      <p className="text-gray-500">
+      <p className="text-gray-600">
         No tienes productos favoritos aún.
       </p>
     </div>

@@ -92,7 +92,7 @@ export default function FavoritosPage() {
               text-center
             "
           >
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-600">
               No tienes productos favoritos.
             </p>
 

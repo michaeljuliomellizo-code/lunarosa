@@ -64,7 +64,7 @@ export default function OrderPaymentCard({
           />
 
           <div>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-600">
               Método
             </p>
 
@@ -83,7 +83,7 @@ export default function OrderPaymentCard({
           />
 
           <div>
-            <p className="text-sm text-gray-500 mb-2">
+            <p className="text-sm text-gray-600 mb-2">
               Estado del pago
             </p>
 
@@ -103,7 +103,7 @@ export default function OrderPaymentCard({
           />
 
           <div>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-600">
               Referencia
             </p>
 
@@ -115,7 +115,7 @@ export default function OrderPaymentCard({
         </div>
 
         <div>
-          <p className="text-sm text-gray-500 mb-2">
+          <p className="text-sm text-gray-600 mb-2">
             Comprobante
           </p>
 
@@ -141,7 +141,7 @@ export default function OrderPaymentCard({
               Ver comprobante
             </Link>
           ) : (
-            <p className="text-gray-400 italic">
+            <p className="text-gray-500 italic">
               No adjuntado
             </p>
           )}
@@ -149,7 +149,7 @@ export default function OrderPaymentCard({
 
         <div className="border-t pt-5 space-y-3">
           <div className="flex justify-between">
-            <span className="text-gray-600">
+            <span className="text-gray-700">
               Subtotal
             </span>
 
@@ -164,7 +164,7 @@ export default function OrderPaymentCard({
           </div>
 
           <div className="flex justify-between">
-            <span className="text-gray-600">
+            <span className="text-gray-700">
               Envío
             </span>
 
@@ -179,7 +179,7 @@ export default function OrderPaymentCard({
           </div>
 
           <div className="flex justify-between">
-            <span className="text-gray-600">
+            <span className="text-gray-700">
               Cupón
             </span>
 
@@ -190,7 +190,7 @@ export default function OrderPaymentCard({
           </div>
 
           <div className="flex justify-between">
-            <span className="text-gray-600">
+            <span className="text-gray-700">
               Referido
             </span>
 

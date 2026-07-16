@@ -65,7 +65,7 @@ export default async function WishlistPage() {
             shadow
           "
         >
-          <p className="text-lg text-gray-500">
+          <p className="text-lg text-gray-600">
             No tienes productos favoritos.
           </p>
 

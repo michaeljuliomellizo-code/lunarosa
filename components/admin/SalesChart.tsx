@@ -47,7 +47,7 @@ export default function SalesChart({
                 {item.month}
               </span>
 
-              <span className="text-xs text-gray-500">
+              <span className="text-xs text-gray-600">
                 $
                 {item.total.toLocaleString()}
               </span>

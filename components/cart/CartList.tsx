@@ -22,9 +22,9 @@ export default function CartList() {
       "
     >
 
-      {items.map((item) => (
+      {items.map((item, index) => (
         <CartItem
-          key={item.id}
+          key={`${item.id}-${item.variant_id}-${index}`}
           item={item}
         />
       ))}

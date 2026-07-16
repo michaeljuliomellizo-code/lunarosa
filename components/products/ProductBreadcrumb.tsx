@@ -9,7 +9,7 @@ export default function ProductBreadcrumb({
 }: Props) {
 
   return (
-    <div className="flex gap-2 text-gray-500 text-sm mb-10">
+    <div className="flex gap-2 text-gray-600 text-sm mb-10">
 
       <Link href="/">
         Inicio

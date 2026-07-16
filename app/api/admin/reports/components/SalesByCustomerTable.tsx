@@ -100,7 +100,7 @@ export default function SalesByCustomerTable({
       </h2>
 
       {customers.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-600">
           No existen ventas para el período seleccionado.
         </div>
       ) : (
@@ -164,7 +164,7 @@ export default function SalesByCustomerTable({
 
                     </td>
 
-                    <td className="text-gray-600">
+                    <td className="text-gray-700">
                       {
                         customer.email
                       }

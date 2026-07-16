@@ -23,7 +23,7 @@ export default function OrderPagination({
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white rounded-xl shadow p-4">
-      <div className="text-sm text-gray-500">
+      <div className="text-sm text-gray-600">
         Página{" "}
         <span className="font-semibold">
           {currentPage}

@@ -7,7 +7,7 @@ export default function CartHeader() {
         Carrito de Compras
       </h1>
 
-      <p className="text-gray-600 mt-3">
+      <p className="text-gray-700 mt-3">
         Revisa tus productos antes de finalizar la compra.
       </p>
     </div>

@@ -58,7 +58,7 @@ export default function LoginPage() {
           Luna Rosa
         </h1>
 
-        <p className="text-center text-gray-500 mb-8">
+        <p className="text-center text-gray-600 mb-8">
           Iniciar Sesión
         </p>
 

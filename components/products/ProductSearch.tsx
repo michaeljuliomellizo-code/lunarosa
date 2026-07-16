@@ -14,7 +14,7 @@ export default function ProductSearch() {
       />
 
       <Search
-        className="absolute left-5 top-4 text-gray-400"
+        className="absolute left-5 top-4 text-gray-500"
       />
     </div>
   );

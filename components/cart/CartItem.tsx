@@ -94,7 +94,7 @@ export default function CartItem({
 
         {item.color && (
           <p className="
-            text-gray-500
+            text-gray-600
             mt-3
             text-sm
             sm:text-base
@@ -123,7 +123,7 @@ export default function CartItem({
 
         {item.sku && (
           <p className="
-            text-gray-500
+            text-gray-600
             mt-4
             text-sm
             sm:text-base

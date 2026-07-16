@@ -70,7 +70,7 @@ export default function RecentOrders({
                 {order.status}
               </p>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 {formatDate(
                   order.created_at
                 )}

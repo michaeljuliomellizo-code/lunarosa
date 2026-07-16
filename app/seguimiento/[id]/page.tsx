@@ -159,11 +159,11 @@ export default async function TrackingPage({
                 {item.status}
               </h3>
 
-              <p className="text-gray-700">
+              <p className="text-gray-800">
                 {item.notes}
               </p>
 
-              <p className="text-sm text-gray-500 break-words">
+              <p className="text-sm text-gray-600 break-words">
                 {new Date(item.created_at).toLocaleString()}
               </p>
             </div>

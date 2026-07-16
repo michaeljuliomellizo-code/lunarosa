@@ -78,7 +78,7 @@ export default function PoliticasPage() {
               className="
                 text-base
                 sm:text-lg
-                text-gray-600
+                text-gray-700
                 mt-6
                 sm:mt-8
                 leading-7
@@ -147,7 +147,7 @@ export default function PoliticasPage() {
 
           </div>
 
-          <div className="mt-8 space-y-5 text-gray-700 leading-8">
+          <div className="mt-8 space-y-5 text-gray-800 leading-8">
 
             <p>
 
@@ -223,7 +223,7 @@ export default function PoliticasPage() {
 
           </div>
 
-          <div className="mt-8 text-gray-700 leading-8">
+          <div className="mt-8 text-gray-800 leading-8">
 
             <p>
 
@@ -280,7 +280,7 @@ export default function PoliticasPage() {
 
           <div className="mt-8">
 
-            <ol className="list-decimal ml-8 space-y-4 text-gray-700 leading-8">
+            <ol className="list-decimal ml-8 space-y-4 text-gray-800 leading-8">
 
               <li>El producto debe haber recibido un uso adecuado.</li>
 
@@ -319,7 +319,7 @@ export default function PoliticasPage() {
 
           </div>
 
-          <div className="mt-8 space-y-6 text-gray-700 leading-8">
+          <div className="mt-8 space-y-6 text-gray-800 leading-8">
 
             <p>
 

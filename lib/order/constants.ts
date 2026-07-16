@@ -20,6 +20,7 @@ export const PAYMENT_METHOD = {
   NEQUI: "nequi",
   DAVIPLATA: "daviplata",
   PSE: "pse",
+  LLAVE: "llave",
 } as const;
 
 export const PAYMENT_METHODS_REQUIRING_PROOF: PaymentMethod[] = [
@@ -27,6 +28,7 @@ export const PAYMENT_METHODS_REQUIRING_PROOF: PaymentMethod[] = [
   PAYMENT_METHOD.NEQUI,
   PAYMENT_METHOD.DAVIPLATA,
   PAYMENT_METHOD.PSE,
+  PAYMENT_METHOD.LLAVE,
 ] as const;
 
 export type OrderStatus =

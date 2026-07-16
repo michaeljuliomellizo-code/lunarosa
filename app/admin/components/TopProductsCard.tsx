@@ -84,7 +84,7 @@ export default function TopProductsCard() {
             Productos más vendidos
           </h2>
 
-          <p className="text-gray-500">
+          <p className="text-gray-600">
             Ranking general
           </p>
 
@@ -92,7 +92,7 @@ export default function TopProductsCard() {
 
         <div className="text-right">
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600">
             Unidades vendidas
           </p>
 
@@ -137,7 +137,7 @@ export default function TopProductsCard() {
                       className="object-cover"
                     />
                   ) : (
-                    <div className="flex items-center justify-center w-full h-full text-gray-400 text-xs">
+                    <div className="flex items-center justify-center w-full h-full text-gray-500 text-xs">
                       Sin imagen
                     </div>
                   )}
@@ -150,7 +150,7 @@ export default function TopProductsCard() {
                     {product.name}
                   </h3>
 
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-600">
                     {product.quantity.toLocaleString()} unidades
                   </p>
 
@@ -165,7 +165,7 @@ export default function TopProductsCard() {
                   {product.revenue.toLocaleString()}
                 </p>
 
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-600">
                   Promedio $
                   {Math.round(
                     product.averagePrice
@@ -202,7 +202,7 @@ export default function TopProductsCard() {
                 {summary.bestSeller.name}
               </p>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 {summary.bestSeller.quantity.toLocaleString()} unidades
               </p>
 

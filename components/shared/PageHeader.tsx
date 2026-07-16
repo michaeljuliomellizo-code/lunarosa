@@ -16,7 +16,7 @@ export default function PageHeader({
       </h1>
 
       {description && (
-        <p className="mt-5 text-gray-500">
+        <p className="mt-5 text-gray-600">
           {description}
         </p>
       )}

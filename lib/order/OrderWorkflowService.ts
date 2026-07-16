@@ -150,7 +150,7 @@ export class OrderWorkflowService {
       await OrderNotificationService.paymentApproved(
         {
           
-          orderNumber:
+          order_number:
             order.order_number,
 
           customerName:

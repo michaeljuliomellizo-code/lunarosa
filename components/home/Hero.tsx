@@ -30,7 +30,7 @@ export default function Hero() {
             Luna Rosa
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mt-4 md:mt-6">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mt-4 md:mt-6">
             Elegancia y comodidad para cada mujer
           </p>
 

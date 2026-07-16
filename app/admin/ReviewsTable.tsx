@@ -144,7 +144,7 @@ export default function ReviewsTable() {
                   Comentario
                 </p>
 
-                <p className="mt-2 text-gray-700">
+                <p className="mt-2 text-gray-800">
                   {
                     review.comment
                   }
