@@ -1,5 +1,5 @@
 import CheckoutForm from "@/components/checkout/CheckoutForm";
-import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 export default function CheckoutPage() {
   

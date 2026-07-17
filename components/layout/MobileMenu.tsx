@@ -9,7 +9,7 @@ export default function MobileMenu() {
 
   const [open, setOpen] = useState(false);
   
-  const { isDark } = useTheme();
+  
 
   return (
     <div className="lg:hidden">

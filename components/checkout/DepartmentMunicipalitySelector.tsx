@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import { colombia } from "@/lib/colombia";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Props {
   department: string;
@@ -18,6 +19,10 @@ export default function DepartmentMunicipalitySelector({
   onMunicipalityChange,
   disabled = false,
 }: Props) {
+
+  const { isDark } =
+    useTheme();
+
   const municipalities = useMemo(() => {
     const selectedDepartment = colombia.find(
       (item) => item.name === department

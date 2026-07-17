@@ -7,7 +7,8 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CartSummary() {
 
-  
+  const { isDark } =
+    useTheme();
 
   const total = useCartStore(
     (state) => state.getTotal()

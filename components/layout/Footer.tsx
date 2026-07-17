@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 
 export default function Footer() {

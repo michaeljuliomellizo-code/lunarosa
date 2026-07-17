@@ -6,7 +6,7 @@ import BannerGrid from "@/components/home/BannerGrid";
 import Testimonials from "@/components/home/Testimonials";
 import Newsletter from "@/components/home/Newsletter";
 import InstagramSection from "@/components/home/InstagramSection";
-import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 
 export default function HomePage() {

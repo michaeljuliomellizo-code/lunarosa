@@ -3,14 +3,12 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 
 import ProductCard from "@/components/products/ProductCard";
-
+import { useTheme } from "../providers/ThemeProvider";
 
 
 export default async function FeaturedProducts() {
   const supabase =
     await createClient();
-
- 
 
   const { data: products } =
     await supabase

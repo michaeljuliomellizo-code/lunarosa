@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 interface Props {
   name: string;
@@ -10,7 +10,7 @@ export default function CategoryCard({
   name,
   image,
 }: Props) {
-  const { isDark } = useTheme();
+ 
 
   return (
     <Link

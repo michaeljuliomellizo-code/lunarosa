@@ -5,7 +5,8 @@ import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CartTotals() {
 
- 
+  const { isDark } =
+    useTheme();
 
   const subtotal =
     useCartStore(

@@ -1,12 +1,11 @@
 import { createClient } from "@/lib/supabase/server";
-import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 export default async function Testimonials() {
   const supabase =
     await createClient();
 
-  const { isDark } =
-    useTheme();
+
 
   const { data: reviews } =
     await supabase

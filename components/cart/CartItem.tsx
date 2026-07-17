@@ -1,5 +1,6 @@
 "use client";
 
+
 import Image from "next/image";
 import {
   Minus,
@@ -28,8 +29,10 @@ interface Props {
 export default function CartItem({
   item,
 }: Props) {
- 
 
+  const { isDark } =
+    useTheme();
+  
   const removeItem =
     useCartStore(
       (state) =>

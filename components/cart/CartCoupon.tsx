@@ -1,6 +1,12 @@
 "use client";
 
+import { useTheme } from "@/components/providers/ThemeProvider";
+
 export default function CartCoupon() {
+
+  const { isDark } =
+  useTheme();
+  
   return (
     <div className="bg-white border rounded-3xl p-6">
       <h3 className="text-xl font-bold mb-4">
