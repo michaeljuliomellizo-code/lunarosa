@@ -1,8 +1,12 @@
 "use client";
 
 import { useCartStore } from "@/store/cartStore";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CartTotals() {
+
+ 
+
   const subtotal =
     useCartStore(
       (state) =>

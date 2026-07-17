@@ -3,8 +3,11 @@
 import { useCartStore } from "@/store/cartStore";
 import CartTotals from "./CartTotals"
 import CartCheckoutButton from "./CartCheckoutButton";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CartSummary() {
+
+  
 
   const total = useCartStore(
     (state) => state.getTotal()

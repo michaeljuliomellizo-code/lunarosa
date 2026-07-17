@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Props {
   images: string[];
@@ -10,6 +11,8 @@ interface Props {
 export default function ProductGallery({
   images,
 }: Props) {
+
+  
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
 

@@ -124,6 +124,8 @@ export interface OrderItem {
     id: string;
     size?: string | null;
     color?: string | null;
+    sku?: string | null;
+    image?: string | null;
   };
 }
 
@@ -195,6 +197,8 @@ export interface OrderEmailData {
     product_variants?: {
       color?: string | null;
       size?: string | null;
+      sku?: string | null;
+      image?: string | null;
     };
   }[];
 }

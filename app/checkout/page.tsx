@@ -1,11 +1,11 @@
 import CheckoutForm from "@/components/checkout/CheckoutForm";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CheckoutPage() {
+  
   return (
     <div
       className="
-        max-w-5xl
-        mx-auto
         px-4
         sm:px-6
         lg:px-8
@@ -14,6 +14,7 @@ export default function CheckoutPage() {
         lg:py-12
       "
     >
+    
       <CheckoutForm />
     </div>
   );

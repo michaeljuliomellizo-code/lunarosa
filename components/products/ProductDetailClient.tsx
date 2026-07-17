@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import WishlistButton from "@/components/products/WishlistButton";
 import AddToCartButton from "@/components/products/AddToCartButton";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Product {
   id: string;
@@ -37,6 +38,8 @@ export default function ProductDetailClient({
   product,
   variants,
 }: Props) {
+
+ 
 
   const colors = useMemo(
     () =>

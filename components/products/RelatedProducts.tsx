@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { createClient } from "@/lib/supabase/server";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Props {
   categoryId: string;
@@ -14,6 +15,8 @@ export default async function RelatedProducts({
 }: Props) {
   const supabase =
     await createClient();
+
+
 
   const {
     data: products,

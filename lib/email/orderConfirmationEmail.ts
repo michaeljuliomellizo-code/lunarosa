@@ -92,8 +92,73 @@ style="
 padding:14px;
 border-bottom:1px solid #F3F4F6;
 ">
-${item.products.name}
+
+<table cellpadding="0" cellspacing="0">
+
+<tr>
+
+<td width="70">
+
+${
+  item.product_variants?.image ||
+  item.products?.image
+    ? `
+<img
+src="${
+  item.product_variants?.image ??
+  item.products?.image
+}"
+width="60"
+height="60"
+style="
+display:block;
+border-radius:8px;
+object-fit:cover;
+"
+/>
+`
+    : `
+<div
+style="
+width:60px;
+height:60px;
+background:#F3F4F6;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:11px;
+color:#9CA3AF;
+">
+Sin imagen
+</div>
+`
+}
+
+width="60"
+height="60"
+style="
+display:block;
+border-radius:8px;
+object-fit:cover;
+"
+/>
+
 </td>
+
+<td style="padding-left:12px;">
+
+<strong>
+${item.products.name}
+</strong>
+
+</td>
+
+</tr>
+
+</table>
+
+</td> 
 
 <td
 style="

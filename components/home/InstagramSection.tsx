@@ -7,6 +7,8 @@ import {
 
 import { Heart } from "lucide-react";
 
+import { useTheme } from "@/components/providers/ThemeProvider";
+
 interface Post {
   id: string;
   media_url: string;
@@ -21,6 +23,9 @@ export default function InstagramSection() {
 
   const [loading, setLoading] =
     useState(true);
+
+  const { isDark } =
+    useTheme();
 
   useEffect(() => {
     loadPosts();

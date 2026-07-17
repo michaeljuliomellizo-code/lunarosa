@@ -4,9 +4,13 @@ import { createClient } from "@/lib/supabase/server";
 
 import ProductCard from "@/components/products/ProductCard";
 
+
+
 export default async function FeaturedProducts() {
   const supabase =
     await createClient();
+
+ 
 
   const { data: products } =
     await supabase

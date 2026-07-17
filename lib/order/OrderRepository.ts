@@ -113,8 +113,11 @@ export class OrderRepository {
             product_variants!fk_order_items_variant(
               id,
               size,
-              color
+              color,
+              sku,
+              image
             )
+          
           ),
           order_status_history(*)
         `)

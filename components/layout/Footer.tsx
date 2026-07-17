@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { useTheme } from "@/components/providers/ThemeProvider";
+
 
 export default function Footer() {
+  
+
   return (
     <footer className="bg-pink-100 mt-20">
 

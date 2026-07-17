@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 
 import { useCartStore } from "@/store/cartStore";
+import { motion } from "framer-motion";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface Props {
   item: {
@@ -26,6 +28,8 @@ interface Props {
 export default function CartItem({
   item,
 }: Props) {
+ 
+
   const removeItem =
     useCartStore(
       (state) =>
@@ -159,9 +163,11 @@ export default function CartItem({
           "
         >
           <button
+            type="button"
             onClick={() =>
               decreaseQuantity(
-                item.id
+                item.id,
+                item.variant_id ?? undefined
               )
             }
             className="
@@ -180,15 +186,21 @@ export default function CartItem({
           >
             <Minus size={18} />
           </button>
-
-          <span className="font-bold text-lg">
+          <motion.span
+            key={item.quantity}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.15 }}
+            className="font-bold text-lg"
+          >
             {item.quantity}
-          </span>
-
+          </motion.span>
           <button
+            type="button"
             onClick={() =>
               increaseQuantity(
-                item.id
+                item.id,
+                item.variant_id ?? undefined
               )
             }
             className="
@@ -199,6 +211,8 @@ export default function CartItem({
               flex
               items-center
               justify-center
+              hover:bg-pink-50
+              transition
             "
           >
             <Plus size={18} />

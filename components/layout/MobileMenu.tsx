@@ -3,10 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function MobileMenu() {
 
   const [open, setOpen] = useState(false);
+  
+  const { isDark } = useTheme();
 
   return (
     <div className="lg:hidden">

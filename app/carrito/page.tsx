@@ -4,8 +4,10 @@ import CartSummary from "@/components/cart/CartSummary";
 import CartCoupon from "@/components/cart/CartCoupon";
 import CartShipping from "@/components/cart/CartShipping";
 import CartActions from "@/components/cart/CartActions";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 export default function CartPage() {
+  
 
   return (
     <main

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useTheme } from "../providers/ThemeProvider";
+
 
 interface Props {
   product: {
@@ -12,8 +14,10 @@ interface Props {
 }
 
 export default function ProductCard({
+  
   product,
 }: Props) {
+
   return (
     <Link
       href={`/producto/${product.slug}`}
