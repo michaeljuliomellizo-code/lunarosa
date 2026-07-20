@@ -1,4 +1,3 @@
-import { ShippingRepository } from "../ShippingRepository";
 import {
   ShippingProvider,
   ShippingQuote,
@@ -14,32 +13,30 @@ export class LocalProvider
     declaredValue?: number
   ): Promise<ShippingQuote> {
 
-    const rate =
-      await ShippingRepository.findRate(
-        department,
-        municipality
-      );
+    const city =
+      municipality
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
 
-    if (!rate) {
+    const isBogota =
+      city === "bogota" ||
+      city === "bogota d.c." ||
+      city === "bogota dc";
 
+    if (isBogota) {
       return {
-        available: false,
-        price: 0,
-        estimated_days: null,
+        available: true,
+        price: 12000,
+        estimated_days: 3,
       };
-
     }
 
     return {
-
       available: true,
-
-      price: Number(rate.price),
-
-      estimated_days:
-        rate.estimated_days ?? null,
-
+      price: 0,
+      estimated_days: 6,
     };
-
   }
 }

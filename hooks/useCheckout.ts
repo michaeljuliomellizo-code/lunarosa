@@ -147,14 +147,8 @@ export function useCheckout() {
   // Derivados
   //------------------------------------------------------
 
-  const bogotaShipping =
-    isBogota(
-      department,
-      municipality
-    );
-
   const allowCashOnDelivery =
-    bogotaShipping;
+    shippingCost > 0;
 
   const deliveryEstimate =
     getDeliveryEstimate(
@@ -200,6 +194,11 @@ export function useCheckout() {
           currentDepartment,
           currentMunicipality
         );
+        console.log({
+          department: currentDepartment,
+          municipality: currentMunicipality,
+          result,
+        });
 
       setShippingCost(
         result.price
@@ -307,19 +306,15 @@ export function useCheckout() {
 
     if (
       !allowCashOnDelivery &&
-      paymentMethod ===
-        "contraentrega"
+      paymentMethod === "contraentrega"
     ) {
 
-      setPaymentMethod(
-        "nequi"
-      );
+      setPaymentMethod("nequi");
 
     }
 
   }, [
     allowCashOnDelivery,
-    paymentMethod,
   ]);
 
   //------------------------------------------------------
@@ -660,8 +655,6 @@ export function useCheckout() {
     estimatedDays,
 
     calculateShipping,
-
-    bogotaShipping,
 
     allowCashOnDelivery,
 

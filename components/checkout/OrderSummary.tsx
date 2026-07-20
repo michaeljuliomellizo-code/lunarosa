@@ -153,23 +153,33 @@ export default function OrderSummary({
 
             {shippingLoading
               ? "Calculando..."
-              : shippingAvailable
+              : !shippingAvailable
+              ? "No disponible"
+              : shippingCost > 0
               ? `$${shippingCost.toLocaleString("es-CO")}`
-              : "No disponible"}
+              : "Contraentrega"}
 
           </span>
 
         </div>
 
-        <div className="flex justify-between mb-2">
+        {shippingAvailable &&
+          shippingCost === 0 &&
+          !shippingLoading && (
 
-          <span>Tiempo estimado</span>
+            <div className="mb-4 rounded-xl bg-amber-50 border border-amber-200 p-3">
 
-          <span className="text-pink-600 font-medium">
-            {deliveryEstimate.label}
-          </span>
+              <p className="text-sm text-amber-700">
 
-        </div>
+                El costo del envío se paga contraentrega y será informado por nuestro asesor al confirmar el pedido.
+
+              </p>
+
+            </div>
+
+        )}
+
+        
 
         {shippingAvailable &&
           estimatedDays && (
