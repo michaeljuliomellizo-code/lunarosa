@@ -251,7 +251,8 @@ export default function CartItem({
         <button
           onClick={() =>
             removeItem(
-              item.id
+              item.id,
+              item.variant_id ?? undefined
             )
           }
           className="

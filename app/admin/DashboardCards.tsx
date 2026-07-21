@@ -36,7 +36,7 @@ export default function DashboardCards() {
         supabase
           .from("orders")
           .select(
-            "id,total,created_at"
+            "id,subtotal,shipping,total,created_at"
           ),
 
         supabase
@@ -63,7 +63,7 @@ export default function DashboardCards() {
           (acc, order) =>
             acc +
             Number(
-              order.total || 0
+              order.subtotal || 0
             ),
           0
         );
@@ -95,7 +95,7 @@ export default function DashboardCards() {
             (acc, order) =>
               acc +
               Number(
-                order.total || 0
+                order.subtotal || 0
               ),
             0
           );

