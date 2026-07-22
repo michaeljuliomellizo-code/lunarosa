@@ -56,7 +56,7 @@ export default function Hero() {
                 hover:scale-105
               "
             >
-              Comprar Ahora
+              Ver Catalogo
             </button>
 
             <button
@@ -87,7 +87,7 @@ export default function Hero() {
                 hover:scale-105
               "
             >
-              Ver Catálogo
+              Destacados
             </button>
 
           </div>
