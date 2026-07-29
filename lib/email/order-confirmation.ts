@@ -143,7 +143,7 @@ export function orderConfirmationEmail(
       </p>
 
       <ul>
-        <li>Nequi: 3123851338</li>
+        <li>Nequi: 3124279921</li>
         <li>Daviplata: 3123851338</li>
         <li>Llave: 3204095701</li>
       </ul>

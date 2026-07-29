@@ -54,7 +54,7 @@ color:#DB2777;
 Información para realizar el pago
 </h3>
 
-<p><strong>Nequi:</strong> 3123851338</p>
+<p><strong>Nequi:</strong> 3124279921</p>
 
 <p><strong>Daviplata:</strong> 3123851338</p>
 

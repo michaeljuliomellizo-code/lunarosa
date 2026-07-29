@@ -129,7 +129,7 @@ export default function PaymentSection({
         </p>
 
         <p>
-          <strong>Nequi:</strong> 3123851338
+          <strong>Nequi:</strong> 3124279921
         </p>
 
         <p>

@@ -26,7 +26,7 @@ export default function PaymentInstructions({
         </p>
 
         <strong>
-          3123851338
+          3124279921
         </strong>
       </div>
     );
