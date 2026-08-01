@@ -74,7 +74,7 @@ export default function PaymentSection({
           </h3>
 
           <p className="text-gray-600 text-sm">
-            3123851338
+            3124279921
           </p>
         </button>
 
@@ -147,7 +147,7 @@ export default function PaymentSection({
 
           {paymentMethod === "nequi" && (
             <p>
-              Realiza tu pago al número <strong>3123851338</strong>.
+              Realiza tu pago al número <strong>3124279921</strong>.
             </p>
           )}
 
