@@ -16,52 +16,75 @@ export class OrderItemsRepository {
     orderId: string,
     items: OrderItemInput[]
   ) {
-    const payload = items.map((item) => ({
-      order_id: orderId,
-      product_id: item.id,
-      variant_id: item.variant_id ?? null,
-      quantity: Number(item.quantity),
-      price: Number(item.price),
-    }));
+    const productIds = items.map((i) => i.id);
 
-    const { data, error } = await supabase
-      .from("order_items")
-      .insert(payload)
-      .select();
+    const { data: products, error } =
+      await supabase
+        .from("products")
+        .select("id, price")
+        .in("id", productIds);
 
     if (error) {
       throw new Error(error.message);
     }
 
-    return data;
-  }
+    
 
-  //-----------------------------------------
-  // Obtener items
-  //-----------------------------------------
+    const priceMap = new Map(
+      products.map((p) => [
+        p.id,
+        Number(p.price),
+      ])
+    );
 
-  static async findByOrder(
-    orderId: string
-  ) {
-    const { data, error } =
+    const payload = items.map((item) => ({
+      order_id: orderId,
+      product_id: item.id,
+      variant_id:
+        item.variant_id ?? null,
+      quantity: Number(
+        item.quantity
+      ),
+      price:
+        priceMap.get(item.id) ??
+        0,
+    }));
+
+    const { data, error: insertError } =
       await supabase
         .from("order_items")
-        .select(`
-          *,
-          products(
-            id,
-            name,
-            slug,
-            image,
-            price
-          ),
-          product_variants(
-            id,
-            size,
-            color
-          )
-        `)
-        .eq("order_id", orderId);
+        .insert(payload)
+        .select();
+
+    if (insertError) {
+      throw new Error(
+        insertError.message
+      );
+    }
+
+    return data;
+  }
+  static async findByOrder(orderId: string) {
+    const { data, error } = await supabase
+      .from("order_items")
+      .select(`
+        *,
+        products(
+          id,
+          name,
+          slug,
+          image,
+          price
+        ),
+        product_variants(
+          id,
+          size,
+          color,
+          sku,
+          image
+        )
+      `)
+      .eq("order_id", orderId);
 
     if (error) {
       throw new Error(error.message);

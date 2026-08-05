@@ -15,6 +15,7 @@ import { InventoryService } from "@/lib/inventory/InventoryService";
 import { CustomerService } from "@/lib/customer/CustomerService";
 
 import { ReferralService } from "@/lib/referral/ReferralService";
+import { PriceValidator } from "./PriceValidator";
 
 export class OrderService {
   static async create(
@@ -26,6 +27,34 @@ export class OrderService {
     //-----------------------------------------
 
     OrderValidator.validate(input);
+
+    const realSubtotal =
+      await PriceValidator.calculate(
+        input.items
+      );
+
+    const realShipping =
+      Number(input.shipping ?? 0);
+
+    const realTotal =
+      realSubtotal + realShipping;
+
+    if (realSubtotal <= 0) {
+      throw new Error(
+        "El pedido no tiene un valor válido."
+      );
+    }
+
+    if (
+      Math.abs(
+        realSubtotal -
+          Number(input.subtotal)
+      ) > 1
+    ) {
+      throw new Error(
+        "El subtotal fue alterado."
+      );
+    }
 
     //-----------------------------------------
     // Validar inventario
@@ -45,7 +74,11 @@ export class OrderService {
     //-----------------------------------------
 
     const order =
-      await OrderRepository.create(input);
+      await OrderRepository.create({
+        ...input,
+        subtotal: realSubtotal,
+        total: realTotal,
+      });
 
     if (!order) {
       throw new Error(
@@ -107,6 +140,12 @@ export class OrderService {
       // Cliente
       //-----------------------------------------
 
+      const realShipping =
+        Number(input.shipping ?? 0);
+
+      const realTotal =
+        realSubtotal + realShipping;
+
       await CustomerService.registerPurchase({
 
         name: input.customer_name,
@@ -115,7 +154,7 @@ export class OrderService {
 
         phone: input.customer_phone,
 
-        total: Number(input.total)
+        total: realTotal,
 
       });
 
